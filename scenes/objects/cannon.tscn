@@ -1,0 +1,92 @@
+[gd_scene load_steps=12 format=3 uid="uid://dra6weoquvwgu"]
+
+[ext_resource type="Texture2D" uid="uid://sbhie2vl6j5l" path="res://assets/Objects/Cannon.png" id="1_3e688"]
+[ext_resource type="Script" path="res://scripts/Objects/Cannon.gd" id="1_q12fh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hee72"]
+atlas = ExtResource("1_3e688")
+region = Rect2(80, 0, 80, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rxi7"]
+atlas = ExtResource("1_3e688")
+region = Rect2(160, 0, 80, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xleqq"]
+atlas = ExtResource("1_3e688")
+region = Rect2(0, 68, 80, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6m40"]
+atlas = ExtResource("1_3e688")
+region = Rect2(80, 68, 80, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrysm"]
+atlas = ExtResource("1_3e688")
+region = Rect2(160, 68, 80, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_im48m"]
+atlas = ExtResource("1_3e688")
+region = Rect2(0, 136, 80, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhnko"]
+atlas = ExtResource("1_3e688")
+region = Rect2(0, 0, 80, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_smd54"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hee72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rxi7")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_xleqq")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_4rxi7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6m40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrysm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_im48m")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhnko")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hq6rj"]
+size = Vector2(50, 43)
+
+[node name="Cannon" type="StaticBody2D"]
+script = ExtResource("1_q12fh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+sprite_frames = SubResource("SpriteFrames_smd54")
+animation = &"attack"
+frame = 6
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 10.5)
+shape = SubResource("RectangleShape2D_hq6rj")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://s167dr4pukgg"]
+
+[ext_resource type="Texture2D" uid="uid://dlor45ah02tm5" path="res://assets/Objects/Others.png" id="1_vt8eu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1hoe"]
+size = Vector2(30, 44)
+
+[node name="Barrel" type="Sprite2D"]
+texture = ExtResource("1_vt8eu")
+region_enabled = true
+region_rect = Rect2(73, 47, 42, 44)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_h1hoe")
+one_way_collision = true

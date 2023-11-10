@@ -1,0 +1,122 @@
+[gd_scene load_steps=18 format=3 uid="uid://b3dfvawl62ij5"]
+
+[ext_resource type="Texture2D" uid="uid://befu3chhduf66" path="res://assets/Objects/Candle.png" id="1_lsdmb"]
+[ext_resource type="Texture2D" uid="uid://s7hdb0v17hv4" path="res://assets/Objects/CandleLight.png" id="2_c02k3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmypq"]
+atlas = ExtResource("1_lsdmb")
+region = Rect2(0, 0, 22, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g52y5"]
+atlas = ExtResource("1_lsdmb")
+region = Rect2(22, 0, 22, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51rl4"]
+atlas = ExtResource("1_lsdmb")
+region = Rect2(44, 0, 22, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujjjs"]
+atlas = ExtResource("1_lsdmb")
+region = Rect2(66, 0, 22, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2hxk"]
+atlas = ExtResource("1_lsdmb")
+region = Rect2(88, 0, 22, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avu7h"]
+atlas = ExtResource("1_lsdmb")
+region = Rect2(110, 0, 22, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwnif"]
+atlas = ExtResource("1_lsdmb")
+region = Rect2(132, 0, 22, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fa65"]
+atlas = ExtResource("1_lsdmb")
+region = Rect2(154, 0, 22, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_710k8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmypq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g52y5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51rl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujjjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2hxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avu7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwnif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fa65")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fy8l"]
+atlas = ExtResource("2_c02k3")
+region = Rect2(0, 0, 70, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urebp"]
+atlas = ExtResource("2_c02k3")
+region = Rect2(70, 0, 70, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppmmu"]
+atlas = ExtResource("2_c02k3")
+region = Rect2(140, 0, 70, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vesst"]
+atlas = ExtResource("2_c02k3")
+region = Rect2(0, 68, 70, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwqy3"]
+atlas = ExtResource("2_c02k3")
+region = Rect2(70, 68, 70, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6drjo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fy8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urebp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppmmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vesst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwqy3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Candle" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_710k8")
+autoplay = "default"
+frame_progress = 0.55858
+
+[node name="Light" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -20)
+sprite_frames = SubResource("SpriteFrames_6drjo")
+autoplay = "default"
+frame_progress = 0.790002
