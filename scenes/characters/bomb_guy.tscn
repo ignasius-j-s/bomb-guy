@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://scripts/Characters/BombGuy/States/AirState.gd" id="5_2oimx"]
 [ext_resource type="Script" path="res://scripts/Characters/BombGuy/States/HurtState.gd" id="6_ycqhf"]
 [ext_resource type="Script" path="res://scripts/Characters/BombGuy/States/ThrowState.gd" id="7_xlo67"]
-[ext_resource type="LabelSettings" uid="uid://dgkny2q031ffg" path="res://resouces/StateDebugLabelSetting.tres" id="8_beoxq"]
+[ext_resource type="LabelSettings" uid="uid://dgkny2q031ffg" path="res://resources/StateDebugLabelSetting.tres" id="8_aidef"]
 [ext_resource type="Script" path="res://scripts/StateDebug.gd" id="8_wim0l"]
 [ext_resource type="Texture2D" uid="uid://8mdkonnhl0h" path="res://assets/ChargingBar.png" id="9_w6vw0"]
 
@@ -675,7 +675,7 @@ offset_top = -76.0
 offset_right = 25.0
 offset_bottom = -45.0
 text = "State"
-label_settings = ExtResource("8_beoxq")
+label_settings = ExtResource("8_aidef")
 horizontal_alignment = 1
 script = ExtResource("8_wim0l")
 state_machine = NodePath("../StateMachine")

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/Characters/Captain.gd" id="1_lt184"]
 [ext_resource type="Texture2D" uid="uid://xescddmyvatk" path="res://assets/Characters/Captain.png" id="2_8q0jx"]
 [ext_resource type="Script" path="res://scripts/Characters/Captain/StateMachine.gd" id="3_fqkdc"]
-[ext_resource type="LabelSettings" uid="uid://dgkny2q031ffg" path="res://resouces/StateDebugLabelSetting.tres" id="3_g80w7"]
+[ext_resource type="LabelSettings" uid="uid://dgkny2q031ffg" path="res://resources/StateDebugLabelSetting.tres" id="3_g80w7"]
 [ext_resource type="Script" path="res://scripts/StateDebug.gd" id="4_wu7ok"]
 [ext_resource type="Script" path="res://scripts/Characters/Captain/States/GroundState.gd" id="4_x738r"]
 [ext_resource type="Script" path="res://scripts/Characters/Captain/States/AirState.gd" id="5_wog15"]

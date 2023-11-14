@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://1c7iyh1b0kxs"]
 
-[ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resouces/tile_set.tres" id="1_0n32e"]
+[ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resources/tile_set.tres" id="1_0n32e"]
 [ext_resource type="PackedScene" uid="uid://b2twnlmh4mwrp" path="res://scenes/characters/bomb_guy.tscn" id="2_dw13o"]
 [ext_resource type="PackedScene" uid="uid://b3dfvawl62ij5" path="res://scenes/objects/candle.tscn" id="3_4byje"]
 [ext_resource type="PackedScene" uid="uid://c4fqw68qv1dcb" path="res://scenes/objects/bomb.tscn" id="3_bbfbb"]
