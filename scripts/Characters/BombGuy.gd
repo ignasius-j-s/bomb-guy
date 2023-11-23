@@ -12,10 +12,11 @@ const BOMB_DIRECTION: Vector2 = Vector2(0.65, -0.55) * 70
 var BombScene: PackedScene = preload("res://scenes/objects/bomb.tscn")
 
 signal get_hit
+signal get_extra_live
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
-var lives: int = 5 # DEBUG purposes
+var lives: int = 3
 var direction: Vector2 = Vector2.ZERO
 var invisible: bool = false
 
@@ -89,3 +90,7 @@ func _on_get_hit() -> void:
 		invisible = true
 		get_tree().create_timer(1.5).connect("timeout", on_invisible_timer_timeout)
 
+
+
+func _on_get_extra_live() -> void:
+	lives = min(3, lives + 1)

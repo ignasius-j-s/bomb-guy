@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://1c7iyh1b0kxs"]
+[gd_scene load_steps=15 format=3 uid="uid://1c7iyh1b0kxs"]
 
 [ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resources/tile_set.tres" id="1_0n32e"]
 [ext_resource type="PackedScene" uid="uid://b2twnlmh4mwrp" path="res://scenes/characters/bomb_guy.tscn" id="2_dw13o"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://s167dr4pukgg" path="res://scenes/objects/barrel.tscn" id="5_3cpb1"]
 [ext_resource type="PackedScene" uid="uid://dra6weoquvwgu" path="res://scenes/objects/cannon.tscn" id="6_0u5f1"]
 [ext_resource type="PackedScene" uid="uid://dadl244p0e4uc" path="res://scenes/objects/desk.tscn" id="6_rffrq"]
+[ext_resource type="PackedScene" uid="uid://cofukykr55kh" path="res://scenes/extra_live.tscn" id="8_m6gru"]
 [ext_resource type="PackedScene" uid="uid://do0g8mmjjlxyk" path="res://scenes/characters/cucumber.tscn" id="10_ieh46"]
 [ext_resource type="PackedScene" uid="uid://bl33vfkxvtami" path="res://scenes/characters/bald_pirate.tscn" id="11_f7xhv"]
 [ext_resource type="PackedScene" uid="uid://hehyt4gn67hk" path="res://scenes/characters/captain.tscn" id="12_5xjqe"]
@@ -62,6 +63,12 @@ position = Vector2(833, 597)
 
 [node name="BombGuy" parent="." instance=ExtResource("2_dw13o")]
 position = Vector2(56, 122)
+
+[node name="ExtraLive2" parent="." instance=ExtResource("8_m6gru")]
+position = Vector2(559, 284)
+
+[node name="ExtraLive" parent="." instance=ExtResource("8_m6gru")]
+position = Vector2(381, 354)
 
 [node name="HealthBar" parent="." instance=ExtResource("13_6ev8c")]
 position = Vector2(20, 20)
