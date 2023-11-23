@@ -1,20 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4sdc58617fy4"]
+[gd_scene load_steps=4 format=3 uid="uid://c4sdc58617fy4"]
 
 [ext_resource type="Texture2D" uid="uid://bwi7s626rpmoi" path="res://assets/HealthBar.png" id="1_bg1eo"]
-[ext_resource type="Texture2D" uid="uid://bxnaw2jw7tvh3" path="res://resouces/heart.tres" id="2_w15yn"]
+[ext_resource type="Script" path="res://scripts/HealthBar.gd" id="2_rs8wg"]
+[ext_resource type="Texture2D" uid="uid://bxnaw2jw7tvh3" path="res://resources/heart.tres" id="2_w15yn"]
 
 [node name="HealthBar" type="Sprite2D"]
 texture = ExtResource("1_bg1eo")
+centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 154, 62)
+script = ExtResource("2_rs8wg")
 
 [node name="Heart1" type="Sprite2D" parent="."]
-position = Vector2(-26, 0)
+position = Vector2(40, 22)
 texture = ExtResource("2_w15yn")
+centered = false
 
 [node name="Heart2" type="Sprite2D" parent="."]
+position = Vector2(66, 22)
 texture = ExtResource("2_w15yn")
+centered = false
 
 [node name="Heart3" type="Sprite2D" parent="."]
-position = Vector2(26, 0)
+position = Vector2(92, 22)
 texture = ExtResource("2_w15yn")
+centered = false
