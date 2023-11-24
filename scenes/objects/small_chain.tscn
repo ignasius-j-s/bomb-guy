@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=3 uid="uid://dsx4uln2qcgb7"]
+
+[ext_resource type="Texture2D" uid="uid://dp52upsoulmye" path="res://assets/Objects/Chain.png" id="1_glkwh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rkg6"]
+atlas = ExtResource("1_glkwh")
+region = Rect2(0, 0, 16, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea867"]
+atlas = ExtResource("1_glkwh")
+region = Rect2(16, 0, 16, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1al4"]
+atlas = ExtResource("1_glkwh")
+region = Rect2(32, 0, 16, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6msy"]
+atlas = ExtResource("1_glkwh")
+region = Rect2(48, 0, 16, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gup1u"]
+atlas = ExtResource("1_glkwh")
+region = Rect2(64, 0, 16, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pccc6"]
+atlas = ExtResource("1_glkwh")
+region = Rect2(80, 0, 16, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpcv4"]
+atlas = ExtResource("1_glkwh")
+region = Rect2(96, 0, 16, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybom0"]
+atlas = ExtResource("1_glkwh")
+region = Rect2(112, 0, 16, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3dac"]
+atlas = ExtResource("1_glkwh")
+region = Rect2(128, 0, 16, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a04s6"]
+atlas = ExtResource("1_glkwh")
+region = Rect2(144, 0, 16, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l3j1q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rkg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea867")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1al4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6msy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gup1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pccc6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpcv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybom0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3dac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a04s6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}]
+
+[node name="SmallChain" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_l3j1q")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.256037
+centered = false
