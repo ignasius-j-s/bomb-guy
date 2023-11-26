@@ -15,4 +15,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func collected_tween():
 	var tween = get_tree().create_tween().bind_node(self)
-	tween.tween_property(self, "scale", Vector2(2,2), 0.4)
+	tween.tween_property(self, "scale", Vector2(2, 2), 0.4)
