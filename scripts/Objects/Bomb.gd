@@ -43,13 +43,15 @@ func explode():
 
 	if explode_area.has_overlapping_bodies():
 		for body in explode_area.get_overlapping_bodies():
-			var direction = global_position.direction_to(body.position)
-			var distance = global_position.distance_to(body.position)
+			if body == self:
+				continue
 
 			if body is CharacterBody2D:
-				# TODO: make player and enemy blasted away
 				body.get_hit.emit()
 			elif body is Bomb:
+				var direction = global_position.direction_to(body.position)
+				var distance = global_position.distance_to(body.position)
+
 				body.apply_central_impulse(direction * 200 * (200 / distance))
 				if not body.is_on:
 					body.is_on = true

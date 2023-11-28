@@ -2,6 +2,7 @@ extends State
 
 @export var air_state: State
 @export var attack_state: State
+@export var scared_state: State
 @export var jump_velocity = -400.0
 
 func state_process(_delta: float) -> void:
@@ -11,6 +12,9 @@ func state_process(_delta: float) -> void:
 
 	if character.attack_area.has_overlapping_bodies():
 		next_state = attack_state
+
+	if character.run_area.has_overlapping_bodies() and not character.sight_area.has_overlapping_bodies():
+		next_state = scared_state
 
 	if character.is_running() and character.is_on_wall():
 		if character.can_jump():

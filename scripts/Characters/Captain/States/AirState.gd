@@ -1,8 +1,12 @@
 extends State
 
 @export var ground_state: State
+@export var attack_state: State
 
 func state_process(_delta: float) -> void:
+	if character.attack_area.has_overlapping_bodies():
+		next_state = attack_state
+
 	if character.is_on_floor():
 		animated_sprite.play("land")
 		can_move = false

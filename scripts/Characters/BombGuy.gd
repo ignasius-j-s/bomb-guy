@@ -38,6 +38,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
+
 	update_facing_animation()
 	move_and_slide()
 

@@ -41,7 +41,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	apply_torque_impulse_to_bomb()
-	jump_delay += delta
+	jump_delay = min(0.4, jump_delay + delta)
 
 
 func apply_torque_impulse_to_bomb():
@@ -61,4 +61,4 @@ func is_running() -> bool:
 
 
 func can_jump() -> bool:
-	return jump_delay > 0.2
+	return jump_delay > 0.2 && is_on_floor()

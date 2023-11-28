@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://scripts/Characters/Cucumber/States/GroundState.gd" id="4_q4k2o"]
 [ext_resource type="Script" path="res://scripts/StateDebug.gd" id="4_t4im8"]
 [ext_resource type="Script" path="res://scripts/Characters/Cucumber/States/HurtState.gd" id="5_8ocq4"]
-[ext_resource type="LabelSettings" uid="uid://dgkny2q031ffg" path="res://resouces/StateDebugLabelSetting.tres" id="5_e7gsn"]
+[ext_resource type="LabelSettings" uid="uid://dgkny2q031ffg" path="res://resources/state_debug_label_setting.tres" id="5_e7gsn"]
 [ext_resource type="Script" path="res://scripts/Characters/Cucumber/States/AirState.gd" id="5_vskt2"]
 [ext_resource type="Script" path="res://scripts/Characters/Cucumber/States/AttackState.gd" id="7_i3xxl"]
 [ext_resource type="Script" path="res://scripts/Characters/Cucumber/States/BlowState.gd" id="8_eir88"]
@@ -440,7 +440,7 @@ shape = SubResource("CapsuleShape2D_h3l1b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DirectionFlip"]
 sprite_frames = SubResource("SpriteFrames_gam54")
-animation = &"land"
+animation = &"idle"
 
 [node name="AttackHitbox" type="Area2D" parent="DirectionFlip"]
 collision_mask = 2
