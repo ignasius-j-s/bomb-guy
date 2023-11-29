@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dvfsij2sfrjtr" path="res://assets/Characters/BaldPirate.png" id="2_dgwo5"]
 [ext_resource type="Script" path="res://scripts/Characters/BaldPirate/StateMachine.gd" id="3_ookut"]
 [ext_resource type="Script" path="res://scripts/Characters/BaldPirate/States/GroundState.gd" id="4_gw0ra"]
-[ext_resource type="LabelSettings" uid="uid://dgkny2q031ffg" path="res://resouces/StateDebugLabelSetting.tres" id="4_ov6r0"]
+[ext_resource type="LabelSettings" uid="uid://dgkny2q031ffg" path="res://resources/state_debug_label_setting.tres" id="4_ov6r0"]
 [ext_resource type="Script" path="res://scripts/StateDebug.gd" id="5_1tlc3"]
 [ext_resource type="Script" path="res://scripts/Characters/BaldPirate/States/HurtState.gd" id="5_rkd18"]
 [ext_resource type="Script" path="res://scripts/Characters/BaldPirate/States/AirState.gd" id="6_3eu1o"]

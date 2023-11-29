@@ -1,7 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://c4fqw68qv1dcb"]
+[gd_scene load_steps=26 format=3 uid="uid://c4fqw68qv1dcb"]
 
 [ext_resource type="Script" path="res://scripts/Objects/Bomb.gd" id="1_7n4uc"]
 [ext_resource type="Texture2D" uid="uid://b0dp0sf54ot4o" path="res://assets/Objects/Bomb.png" id="1_x2mxn"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q8e01"]
+rough = true
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hwsjh"]
 atlas = ExtResource("1_x2mxn")
@@ -165,6 +168,7 @@ height = 100.0
 collision_layer = 8
 collision_mask = 45
 mass = 5.5
+physics_material_override = SubResource("PhysicsMaterial_q8e01")
 script = ExtResource("1_7n4uc")
 metadata/_edit_group_ = true
 

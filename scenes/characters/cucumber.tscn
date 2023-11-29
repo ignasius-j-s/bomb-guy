@@ -424,7 +424,7 @@ animations = [{
 size = Vector2(34, 54)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_24nfu"]
-size = Vector2(37, 71)
+size = Vector2(37, 59)
 
 [node name="Cucumber" type="CharacterBody2D"]
 collision_layer = 4
@@ -454,7 +454,7 @@ debug_color = Color(0.701961, 0.333333, 0, 0.419608)
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DirectionFlip/BlowHitbox"]
-position = Vector2(6.5, 10.5)
+position = Vector2(6.5, 4.5)
 shape = SubResource("RectangleShape2D_24nfu")
 debug_color = Color(0, 0.572549, 0.219608, 0.419608)
 
