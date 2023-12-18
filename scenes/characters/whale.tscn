@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://cjvr35nfy8il"]
+[gd_scene load_steps=67 format=3 uid="uid://cjvr35nfy8il"]
 
 [ext_resource type="Script" path="res://scripts/Characters/Whale.gd" id="1_stb4r"]
 [ext_resource type="Texture2D" uid="uid://ce41fuu8njhk7" path="res://assets/Characters/Whale.png" id="2_ralxe"]
@@ -7,6 +7,9 @@
 [ext_resource type="Script" path="res://scripts/Characters/Whale/States/AirState.gd" id="5_boqlm"]
 [ext_resource type="LabelSettings" uid="uid://dgkny2q031ffg" path="res://resources/state_debug_label_setting.tres" id="5_dq6c4"]
 [ext_resource type="Script" path="res://scripts/StateDebug.gd" id="6_0aa1q"]
+[ext_resource type="Script" path="res://scripts/Characters/Whale/States/AttackState.gd" id="6_unc7f"]
+[ext_resource type="Script" path="res://scripts/Characters/Whale/States/SwallowState.gd" id="7_b5vry"]
+[ext_resource type="Script" path="res://scripts/Characters/Whale/States/HurtState.gd" id="8_gmmqj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g6edi"]
 radius = 20.0
@@ -489,7 +492,7 @@ polygon = PackedVector2Array(350, 23, 5, 23, 5, -23, 350, -23)
 collision_mask = 42
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DirectionFlip/AttackHitbox"]
-position = Vector2(23.5, 5.5)
+position = Vector2(34.5, 5.5)
 shape = SubResource("RectangleShape2D_gb60t")
 debug_color = Color(0.94902, 0.227451, 0, 0.419608)
 
@@ -499,13 +502,30 @@ character = NodePath("..")
 animated_sprite = NodePath("../DirectionFlip/AnimatedSprite2D")
 current_state = NodePath("Ground")
 
-[node name="Ground" type="Node" parent="StateMachine" node_paths=PackedStringArray("air_state")]
+[node name="Ground" type="Node" parent="StateMachine" node_paths=PackedStringArray("air_state", "attack_state", "swallow_state")]
 script = ExtResource("4_mq614")
 air_state = NodePath("../Air")
+attack_state = NodePath("../Attack")
+swallow_state = NodePath("../Swallow")
 
 [node name="Air" type="Node" parent="StateMachine" node_paths=PackedStringArray("ground_state")]
 script = ExtResource("5_boqlm")
 ground_state = NodePath("../Ground")
+
+[node name="Attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("ground_state")]
+script = ExtResource("6_unc7f")
+ground_state = NodePath("../Ground")
+can_move = false
+
+[node name="Swallow" type="Node" parent="StateMachine" node_paths=PackedStringArray("ground_state")]
+script = ExtResource("7_b5vry")
+ground_state = NodePath("../Ground")
+can_move = false
+
+[node name="Hurt" type="Node" parent="StateMachine" node_paths=PackedStringArray("ground_state")]
+script = ExtResource("8_gmmqj")
+ground_state = NodePath("../Ground")
+can_move = false
 
 [node name="FacingTimer" type="Timer" parent="."]
 wait_time = 2.5
@@ -521,6 +541,10 @@ label_settings = ExtResource("5_dq6c4")
 script = ExtResource("6_0aa1q")
 state_machine = NodePath("../StateMachine")
 
+[connection signal="get_hit" from="." to="." method="_on_get_hit"]
+[connection signal="animation_finished" from="DirectionFlip/AnimatedSprite2D" to="StateMachine/Attack" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="DirectionFlip/AnimatedSprite2D" to="StateMachine/Swallow" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="DirectionFlip/AnimatedSprite2D" to="StateMachine/Hurt" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="DirectionFlip/SightArea" to="." method="_on_sight_area_body_entered"]
 [connection signal="body_exited" from="DirectionFlip/SightArea" to="." method="_on_sight_area_body_exited"]
 [connection signal="timeout" from="FacingTimer" to="." method="_on_facing_timer_timeout"]

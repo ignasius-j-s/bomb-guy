@@ -2,14 +2,21 @@ extends State
 
 @export var jump_velocity = -280.0
 @export var air_state: State
+@export var attack_state: State
+@export var swallow_state: State
 
 func state_process(_delta: float) -> void:
 	update_animation()
 	if not character.is_on_floor():
 		next_state = air_state
 
-#	if character.attack_area.has_overlapping_bodies():
-#		next_state = attack_state
+	if character.attack_area.has_overlapping_bodies():
+		var body = character.attack_area.get_overlapping_bodies()[0]
+
+		if body is BombGuy:
+			next_state = attack_state
+		elif body is Bomb:
+			next_state = swallow_state
 
 	if character.is_running() and character.is_on_wall():
 		if character.can_jump():
