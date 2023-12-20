@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://1c7iyh1b0kxs"]
+[gd_scene load_steps=24 format=3 uid="uid://1c7iyh1b0kxs"]
 
 [ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resources/tile_set.tres" id="1_0n32e"]
 [ext_resource type="PackedScene" uid="uid://b801kesmy85o" path="res://scenes/objects/chair.tscn" id="2_7bwpn"]
@@ -16,9 +16,13 @@
 [ext_resource type="PackedScene" uid="uid://do0g8mmjjlxyk" path="res://scenes/characters/cucumber.tscn" id="10_ieh46"]
 [ext_resource type="PackedScene" uid="uid://bl33vfkxvtami" path="res://scenes/characters/bald_pirate.tscn" id="11_f7xhv"]
 [ext_resource type="PackedScene" uid="uid://hehyt4gn67hk" path="res://scenes/characters/captain.tscn" id="12_5xjqe"]
+[ext_resource type="PackedScene" uid="uid://66eqavs70a46" path="res://scenes/objects/green_bottle.tscn" id="12_kjyre"]
+[ext_resource type="PackedScene" uid="uid://cu48fnhoqv58h" path="res://scenes/objects/red_bottle.tscn" id="12_xo25d"]
 [ext_resource type="PackedScene" uid="uid://c4sdc58617fy4" path="res://scenes/health_bar.tscn" id="13_6ev8c"]
 [ext_resource type="PackedScene" uid="uid://cjvr35nfy8il" path="res://scenes/characters/whale.tscn" id="15_0o17o"]
 [ext_resource type="PackedScene" uid="uid://c8oj2k20sslny" path="res://scenes/characters/big_guy.tscn" id="16_gh7ws"]
+[ext_resource type="PackedScene" uid="uid://dpho7eey1kwli" path="res://scenes/objects/skull.tscn" id="18_61ojp"]
+[ext_resource type="PackedScene" uid="uid://cvbtt2b3aqrxn" path="res://scenes/objects/blue_bottle.tscn" id="21_d0c5a"]
 
 [node name="TestLevel" type="Node2D"]
 
@@ -29,7 +33,7 @@ layer_0/tile_data = PackedInt32Array(0, 196608, 0, 65536, 196608, 1, 131072, 196
 layer_1/tile_data = PackedInt32Array(655362, 65536, 0, 655363, 65536, 0, 655364, 65536, 0, 655365, 65536, 0, 655366, 65536, 0, 655367, 65536, 0, 655368, 65536, 0, 655369, 65536, 0, 655370, 65536, 0, 655371, 65536, 0, 655372, 65536, 0, 655373, 65536, 0, 655374, 65536, 0, 655375, 65536, 0, 655376, 65536, 0, 458760, 327680, 3, 458761, 327680, 3, 589825, 131072, 1, 524289, 131072, 1, 458753, 131072, 1, 393217, 131072, 0, 393216, 0, 0, 458752, 0, 1, 524288, 0, 1, 589824, 0, 1, 655360, 65536, 4, 655361, 0, 4, 458762, 262144, 4, 393218, 327680, 3, 393219, 262144, 4, 524302, 327680, 4, 458764, 327680, 4, 131091, 65536, 0, 131090, 65536, 0, 131089, 0, 0, 196625, 0, 1, 262161, 0, 1, 327697, 0, 1, 393233, 0, 1, 458769, 0, 1, 524305, 0, 1, 589841, 0, 1, 655377, 65536, 4, 196626, 65536, 1, 196627, 65536, 1, 262162, 65536, 1, 262163, 65536, 1, 327698, 65536, 1, 327699, 65536, 1, 393234, 65536, 1, 393235, 65536, 1, 458771, 65536, 1, 524307, 65536, 1, 655378, 65536, 1, 589842, 65536, 1, 524306, 65536, 1, 458770, 65536, 1, 589843, 65536, 1, 655379, 65536, 1, 458768, 327680, 3, 458767, 262144, 3, 393230, 262144, 4, 393229, 262144, 3, 327691, 262144, 4, 327690, 327680, 3, 327689, 262144, 3, 196624, 262144, 3, 262157, 262144, 3, 262158, 262144, 4, 458759, 262144, 3, 720897, 65536, 1, 720896, 65536, 1, 720898, 65536, 1, 720899, 65536, 1, 720900, 65536, 1, 720901, 65536, 1, 720902, 65536, 1, 720903, 65536, 1, 720904, 65536, 1, 720905, 65536, 1, 720906, 65536, 1, 720907, 65536, 1, 720908, 65536, 1, 720909, 65536, 1, 720910, 65536, 1, 720911, 65536, 1, 720912, 65536, 1, 720913, 65536, 1, 720914, 65536, 1, 720915, 65536, 1)
 
 [node name="Chair" parent="." instance=ExtResource("2_7bwpn")]
-position = Vector2(235, 356)
+position = Vector2(477, 420)
 
 [node name="Desk" parent="." instance=ExtResource("6_rffrq")]
 position = Vector2(636, 624)
@@ -59,6 +63,15 @@ position = Vector2(143, 393)
 [node name="BigChain" parent="." instance=ExtResource("9_54yvy")]
 position = Vector2(557, 457)
 
+[node name="BlueBottle" parent="." instance=ExtResource("21_d0c5a")]
+position = Vector2(99, 332)
+
+[node name="GreenBottle" parent="." instance=ExtResource("12_kjyre")]
+position = Vector2(219, 342)
+
+[node name="RedBottle" parent="." instance=ExtResource("12_xo25d")]
+position = Vector2(203, 359)
+
 [node name="Bomb" parent="." instance=ExtResource("3_bbfbb")]
 position = Vector2(176, 346)
 
@@ -79,6 +92,10 @@ position = Vector2(597, 406)
 
 [node name="BombGuy" parent="." instance=ExtResource("2_dw13o")]
 position = Vector2(56, 122)
+
+[node name="Skull" parent="." instance=ExtResource("18_61ojp")]
+position = Vector2(418, 392)
+max_contacts_reported = 4
 
 [node name="ExtraLive2" parent="." instance=ExtResource("8_m6gru")]
 position = Vector2(559, 284)

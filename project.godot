@@ -61,6 +61,7 @@ throw_bomb={
 2d_physics/layer_4="Bomb"
 2d_physics/layer_5="Dead Enemy"
 2d_physics/layer_6="Dead Bomb"
+2d_physics/layer_7="Bottle"
 
 [rendering]
 

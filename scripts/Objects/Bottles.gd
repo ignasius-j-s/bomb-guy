@@ -1,0 +1,2 @@
+class_name Bottles
+extends RigidBody2D

@@ -67,3 +67,11 @@ func _on_animated_sprite_2d_animation_finished():
 			bomb.collision_layer = bomb_collision_layer
 			await get_tree().create_timer(0.45).timeout
 			next_state = ground_state
+
+
+func _on_big_guy_get_hit():
+	process = false
+	can_move = false
+
+	if character.state_machine.current_state == self:
+		bomb.explode()

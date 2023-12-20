@@ -696,6 +696,7 @@ script = ExtResource("5_ncuw7")
 state_machine = NodePath("../StateMachine")
 
 [connection signal="get_hit" from="." to="." method="_on_get_hit"]
+[connection signal="get_hit" from="." to="StateMachine/Carry" method="_on_big_guy_get_hit"]
 [connection signal="animation_finished" from="DirectionFlip/AnimatedSprite2D" to="StateMachine/Hurt" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="animation_finished" from="DirectionFlip/AnimatedSprite2D" to="StateMachine/Attack" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="animation_finished" from="DirectionFlip/AnimatedSprite2D" to="StateMachine/Carry" method="_on_animated_sprite_2d_animation_finished"]

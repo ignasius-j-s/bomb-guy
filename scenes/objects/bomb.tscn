@@ -161,8 +161,8 @@ animations = [{
 radius = 15.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2h0y"]
-radius = 40.0
-height = 100.0
+radius = 41.0
+height = 104.0
 
 [node name="Bomb" type="RigidBody2D"]
 disable_mode = 1
@@ -172,7 +172,6 @@ mass = 5.5
 physics_material_override = SubResource("PhysicsMaterial_q8e01")
 freeze_mode = 1
 script = ExtResource("1_7n4uc")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -19)
@@ -183,10 +182,10 @@ animation = &"bomb_off"
 shape = SubResource("CircleShape2D_yyybq")
 
 [node name="ExplodeArea" type="Area2D" parent="."]
-collision_mask = 46
+collision_mask = 110
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExplodeArea"]
-position = Vector2(0, -19)
+position = Vector2(0, -21)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_s2h0y")
 debug_color = Color(0.701961, 0.333333, 0, 0.419608)

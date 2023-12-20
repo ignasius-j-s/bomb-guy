@@ -48,13 +48,15 @@ func explode():
 
 			if body is CharacterBody2D:
 				body.get_hit.emit()
-			elif body is Bomb:
+			else:
 				var direction = global_position.direction_to(body.position)
 				var distance = global_position.distance_to(body.position)
-
-				body.apply_central_impulse(direction * 200 * (200 / distance))
-				if not body.is_on:
-					body.is_on = true
+				if body is Bomb:
+					body.apply_central_impulse(direction * 200 * (200 / distance))
+					if not body.is_on:
+						body.is_on = true
+				elif body is Bottles:
+					body.apply_central_impulse(direction * 85 * (85 / distance))
 
 
 func time_left() -> float:

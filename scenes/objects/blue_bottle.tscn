@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvbtt2b3aqrxn"]
+
+[ext_resource type="Script" path="res://scripts/Objects/Bottles.gd" id="1_m33bn"]
+[ext_resource type="Texture2D" uid="uid://dlor45ah02tm5" path="res://assets/Objects/Others.png" id="1_ndxb0"]
+
+[node name="BlueBottle" type="RigidBody2D"]
+position = Vector2(0, -4)
+collision_layer = 64
+mass = 0.4
+script = ExtResource("1_m33bn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ndxb0")
+region_enabled = true
+region_rect = Rect2(5, 76, 16, 21)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 0.5)
+polygon = PackedVector2Array(-4, -11, -4, -4, -8, -4, -8, 10, 8, 10, 8, -4, 4, -4, 4, -11)

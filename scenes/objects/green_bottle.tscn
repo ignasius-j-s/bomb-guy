@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://66eqavs70a46"]
+
+[ext_resource type="Script" path="res://scripts/Objects/Bottles.gd" id="1_0met3"]
+[ext_resource type="Texture2D" uid="uid://dlor45ah02tm5" path="res://assets/Objects/Others.png" id="2_08djo"]
+
+[node name="GreenBottle" type="RigidBody2D"]
+position = Vector2(0, -4)
+collision_layer = 64
+mass = 0.42
+script = ExtResource("1_0met3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_08djo")
+region_enabled = true
+region_rect = Rect2(149, 47, 14, 24)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-3, -12, -3, -4, -7, -4, -7, 12, 7, 12, 7, -4, 3, -4, 3, -12)

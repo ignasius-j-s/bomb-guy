@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpho7eey1kwli"]
+
+[ext_resource type="Texture2D" uid="uid://dlor45ah02tm5" path="res://assets/Objects/Others.png" id="1_fm2of"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfvaa"]
+size = Vector2(19, 14)
+
+[node name="Skull" type="RigidBody2D"]
+mass = 0.6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jfvaa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fm2of")
+region_enabled = true
+region_rect = Rect2(31, 76, 19, 14)
