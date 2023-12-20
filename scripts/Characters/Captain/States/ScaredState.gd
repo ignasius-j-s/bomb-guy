@@ -7,7 +7,9 @@ var bomb: Bomb
 
 func on_enter():
 	character.facing_timer.stop()
-	bomb = run_area.get_overlapping_bodies().front()
+	if run_area.has_overlapping_bodies():
+		bomb = run_area.get_overlapping_bodies().front()
+
 	if bomb != null:
 		set_direction()
 
