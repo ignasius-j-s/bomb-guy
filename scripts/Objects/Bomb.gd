@@ -57,6 +57,10 @@ func explode():
 					body.is_on = true
 
 
+func time_left() -> float:
+	return timer.time_left
+
+
 func _on_timer_timeout() -> void:
 	explode()
 

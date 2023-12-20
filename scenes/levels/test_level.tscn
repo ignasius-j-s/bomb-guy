@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://1c7iyh1b0kxs"]
+[gd_scene load_steps=20 format=3 uid="uid://1c7iyh1b0kxs"]
 
 [ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resources/tile_set.tres" id="1_0n32e"]
 [ext_resource type="PackedScene" uid="uid://b801kesmy85o" path="res://scenes/objects/chair.tscn" id="2_7bwpn"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://hehyt4gn67hk" path="res://scenes/characters/captain.tscn" id="12_5xjqe"]
 [ext_resource type="PackedScene" uid="uid://c4sdc58617fy4" path="res://scenes/health_bar.tscn" id="13_6ev8c"]
 [ext_resource type="PackedScene" uid="uid://cjvr35nfy8il" path="res://scenes/characters/whale.tscn" id="15_0o17o"]
+[ext_resource type="PackedScene" uid="uid://c8oj2k20sslny" path="res://scenes/characters/big_guy.tscn" id="16_gh7ws"]
 
 [node name="TestLevel" type="Node2D"]
 
@@ -49,7 +50,7 @@ position = Vector2(1183, 80)
 position = Vector2(757, 608)
 
 [node name="Cannon2" parent="." instance=ExtResource("6_0u5f1")]
-position = Vector2(527, 416)
+position = Vector2(601, 288)
 scale = Vector2(-1, 1)
 
 [node name="SmallChain" parent="." instance=ExtResource("8_006ub")]
@@ -62,7 +63,7 @@ position = Vector2(557, 457)
 position = Vector2(176, 346)
 
 [node name="Cucumber" parent="." instance=ExtResource("10_ieh46")]
-position = Vector2(710, 265)
+position = Vector2(1052, 146)
 
 [node name="BaldPirate" parent="." instance=ExtResource("11_f7xhv")]
 position = Vector2(335, 567)
@@ -71,7 +72,10 @@ position = Vector2(335, 567)
 position = Vector2(833, 597)
 
 [node name="Whale" parent="." instance=ExtResource("15_0o17o")]
-position = Vector2(603, 419)
+position = Vector2(894, 220)
+
+[node name="BigGuy" parent="." instance=ExtResource("16_gh7ws")]
+position = Vector2(597, 406)
 
 [node name="BombGuy" parent="." instance=ExtResource("2_dw13o")]
 position = Vector2(56, 122)

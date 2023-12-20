@@ -165,10 +165,12 @@ radius = 40.0
 height = 100.0
 
 [node name="Bomb" type="RigidBody2D"]
+disable_mode = 1
 collision_layer = 8
 collision_mask = 45
 mass = 5.5
 physics_material_override = SubResource("PhysicsMaterial_q8e01")
+freeze_mode = 1
 script = ExtResource("1_7n4uc")
 metadata/_edit_group_ = true
 

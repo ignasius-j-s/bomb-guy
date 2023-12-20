@@ -19,6 +19,7 @@ func swallow():
 	if character.attack_area.has_overlapping_bodies():
 		for body in character.attack_area.get_overlapping_bodies():
 			if body is Bomb:
+				body.freeze = true
 				body.queue_free()
 				return
 
