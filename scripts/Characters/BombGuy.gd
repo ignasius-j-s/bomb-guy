@@ -10,6 +10,7 @@ extends CharacterBody2D
 const BOMB_DIRECTION: Vector2 = Vector2(0.65, -0.55) * 70
 
 var BombScene: PackedScene = preload("res://scenes/objects/bomb.tscn")
+var RunParticleScene: PackedScene = preload("res://scenes/particles/run_particle.tscn")
 
 signal get_hit
 signal get_extra_live
@@ -20,6 +21,7 @@ var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 var lives: int = 3
 var direction: Vector2 = Vector2.ZERO
 var invisible: bool = false
+var run_particle_delay = 0
 
 func _ready() -> void:
 	$ChargingBar.hide()
@@ -38,15 +40,27 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
+	run_particle(delta)
 
 	update_facing_animation()
 	move_and_slide()
 
-#	for i in get_slide_collision_count():
-#		var slide = get_slide_collision(i)
-#		var collider = slide.get_collider()
-#		if collider is Bomb:
-#			collider.apply_torque_impulse(direction.x * push)
+
+func run_particle(delta):
+	if is_running() and run_particle_delay <= 0:
+		var shift_x = -4
+		var particle: Particles = RunParticleScene.instantiate()
+		particle.position = position
+
+		if animated_sprite.flip_h:
+			particle.scale.x *= -1
+			shift_x *= -1
+
+		particle.position.x += shift_x
+		get_tree().root.add_child(particle)
+		run_particle_delay = 0.45
+	else:
+		run_particle_delay = max(0, run_particle_delay - delta)
 
 
 func update_facing_animation():
@@ -70,6 +84,10 @@ func bomb_direction() -> Vector2:
 
 func is_dead() -> bool:
 	return lives == 0
+
+
+func is_running() -> bool:
+	return animated_sprite.animation == "run"
 
 
 func play_tween():
