@@ -33,9 +33,10 @@ func on_enter():
 	can_move = false
 	animated_sprite.play("bomb_pick")
 	bomb = character.pick_area.get_overlapping_bodies().front()
-	bomb.freeze = true
-	bomb.collision_layer = 0
-	bomb.collision_mask = 0
+	if bomb:
+		bomb.freeze = true
+		bomb.collision_layer = 0
+		bomb.collision_mask = 0
 
 
 func on_exit():
