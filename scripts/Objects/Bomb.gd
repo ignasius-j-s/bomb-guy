@@ -39,6 +39,7 @@ func explode():
 	freeze = true
 	lock_rotation = true
 	collision_shape.disabled = true
+	$SFX.play(0.07)
 	animated_sprite.play("bomb_explode")
 
 	if explode_area.has_overlapping_bodies():
@@ -70,4 +71,3 @@ func _on_timer_timeout() -> void:
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if animated_sprite.animation == "bomb_explode":
 		queue_free()
-

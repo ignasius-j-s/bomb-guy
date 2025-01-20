@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@onready var player: BombGuy = get_node("../BombGuy")
+@export var player: BombGuy
 
 func _ready() -> void:
 	position = Vector2(20, 20)
@@ -13,4 +13,3 @@ func update_health_bar():
 	$Heart1.visible = player.lives >= 1
 	$Heart2.visible = player.lives >= 2
 	$Heart3.visible = player.lives >= 3
-

@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://c4fqw68qv1dcb"]
+[gd_scene load_steps=27 format=3 uid="uid://c4fqw68qv1dcb"]
 
 [ext_resource type="Script" path="res://scripts/Objects/Bomb.gd" id="1_7n4uc"]
 [ext_resource type="Texture2D" uid="uid://b0dp0sf54ot4o" path="res://assets/Objects/Bomb.png" id="1_x2mxn"]
+[ext_resource type="AudioStream" uid="uid://cf3520a5qoh0k" path="res://assets/Audio/Bomb.ogg" id="3_a7lpm"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q8e01"]
 rough = true
@@ -193,6 +194,9 @@ debug_color = Color(0.701961, 0.333333, 0, 0.419608)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_a7lpm")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

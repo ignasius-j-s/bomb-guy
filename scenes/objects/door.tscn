@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://ygxxiw041twk"]
+[gd_scene load_steps=17 format=3 uid="uid://ygxxiw041twk"]
 
 [ext_resource type="Script" path="res://scripts/Objects/Door.gd" id="1_ubr7e"]
 [ext_resource type="Texture2D" uid="uid://dckdvt7ihi410" path="res://assets/Objects/Door.png" id="1_vmm2v"]
+[ext_resource type="AudioStream" uid="uid://q1wu4qwyd8p5" path="res://assets/Audio/Door.ogg" id="3_e5iha"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_olgh6"]
 atlas = ExtResource("1_vmm2v")
@@ -99,7 +100,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2wf8"]
-size = Vector2(36, 94)
+size = Vector2(19, 79)
 
 [node name="Door" type="Area2D"]
 collision_mask = 2
@@ -110,8 +111,11 @@ sprite_frames = SubResource("SpriteFrames_nwulk")
 animation = &"closed"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(6.5, 8.5)
 shape = SubResource("RectangleShape2D_f2wf8")
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_e5iha")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

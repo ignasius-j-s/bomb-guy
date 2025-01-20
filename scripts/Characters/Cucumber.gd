@@ -42,4 +42,3 @@ func _on_sight_area_body_exited(body: Node2D) -> void:
 
 	if sighted_body.is_empty():
 		facing_timer.start()
-

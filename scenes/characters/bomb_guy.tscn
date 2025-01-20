@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://b2twnlmh4mwrp"]
+[gd_scene load_steps=94 format=3 uid="uid://b2twnlmh4mwrp"]
 
 [ext_resource type="Texture2D" uid="uid://v051gqhcapau" path="res://assets/Characters/BombGuy.png" id="1_1gbfb"]
 [ext_resource type="Script" path="res://scripts/Characters/BombGuy.gd" id="1_lr7s5"]
@@ -10,6 +10,8 @@
 [ext_resource type="LabelSettings" uid="uid://dgkny2q031ffg" path="res://resources/state_debug_label_setting.tres" id="8_0b11t"]
 [ext_resource type="Script" path="res://scripts/StateDebug.gd" id="8_wim0l"]
 [ext_resource type="Texture2D" uid="uid://8mdkonnhl0h" path="res://assets/ChargingBar.png" id="9_w6vw0"]
+[ext_resource type="AudioStream" uid="uid://dklysh1bp2kaj" path="res://assets/Audio/Step.wav" id="11_femar"]
+[ext_resource type="AudioStream" uid="uid://bixofdo3ily8v" path="res://assets/Audio/Heal.wav" id="11_hp5bn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ggofl"]
 atlas = ExtResource("1_1gbfb")
@@ -637,7 +639,9 @@ script = ExtResource("1_lr7s5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_v7iff")
-animation = &"idle"
+animation = &"door_out"
+frame = 14
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 7)
@@ -685,7 +689,11 @@ position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_knhve")
 animation = &"charging"
 
-[connection signal="get_extra_live" from="." to="." method="_on_get_extra_live"]
-[connection signal="get_hit" from="." to="." method="_on_get_hit"]
+[node name="HealSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_hp5bn")
+
+[node name="StepSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_femar")
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="StateMachine/Hurt" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="animation_finished" from="ChargingBar" to="StateMachine/Throw" method="_on_charging_bar_animation_finished"]

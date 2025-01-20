@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://1c7iyh1b0kxs"]
+[gd_scene load_steps=29 format=4 uid="uid://1c7iyh1b0kxs"]
 
 [ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resources/tile_set.tres" id="1_0n32e"]
 [ext_resource type="PackedScene" uid="uid://b801kesmy85o" path="res://scenes/objects/chair.tscn" id="2_7bwpn"]
@@ -23,6 +23,11 @@
 [ext_resource type="PackedScene" uid="uid://c8oj2k20sslny" path="res://scenes/characters/big_guy.tscn" id="16_gh7ws"]
 [ext_resource type="PackedScene" uid="uid://dpho7eey1kwli" path="res://scenes/objects/skull.tscn" id="18_61ojp"]
 [ext_resource type="PackedScene" uid="uid://cvbtt2b3aqrxn" path="res://scenes/objects/blue_bottle.tscn" id="21_d0c5a"]
+[ext_resource type="PackedScene" uid="uid://dsmvp7ds78ack" path="res://scenes/ui/game_over_dialog.tscn" id="25_26ih6"]
+[ext_resource type="PackedScene" uid="uid://cvcc7klo4r57c" path="res://scenes/touch_screen_control.tscn" id="25_cau7u"]
+[ext_resource type="AudioStream" uid="uid://5csa41sf2vsv" path="res://assets/Audio/Music1.ogg" id="27_3nw4o"]
+[ext_resource type="PackedScene" uid="uid://cj17fc8tdujcl" path="res://scenes/ui/pause_dialog.tscn" id="27_ua01x"]
+[ext_resource type="PackedScene" uid="uid://b3fa2nnd5fn8t" path="res://scenes/ui/victory_dialog.tscn" id="28_53idx"]
 
 [node name="TestLevel" type="Node2D"]
 
@@ -81,9 +86,6 @@ position = Vector2(203, 359)
 [node name="Bomb" parent="." instance=ExtResource("3_bbfbb")]
 position = Vector2(176, 346)
 
-[node name="Cucumber" parent="." instance=ExtResource("10_ieh46")]
-position = Vector2(1052, 146)
-
 [node name="BaldPirate" parent="." instance=ExtResource("11_f7xhv")]
 position = Vector2(335, 567)
 
@@ -93,15 +95,26 @@ position = Vector2(833, 597)
 [node name="Whale" parent="." instance=ExtResource("15_0o17o")]
 position = Vector2(894, 220)
 
+[node name="Cucumber" parent="." instance=ExtResource("10_ieh46")]
+position = Vector2(149, 234)
+
 [node name="BigGuy" parent="." instance=ExtResource("16_gh7ws")]
 position = Vector2(597, 406)
-
-[node name="BombGuy" parent="." instance=ExtResource("2_dw13o")]
-position = Vector2(56, 122)
 
 [node name="Skull" parent="." instance=ExtResource("18_61ojp")]
 position = Vector2(418, 392)
 max_contacts_reported = 4
+
+[node name="BombGuy" parent="." instance=ExtResource("2_dw13o")]
+position = Vector2(1113, 96)
+
+[node name="Camera2D" type="Camera2D" parent="BombGuy"]
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 720
+position_smoothing_enabled = true
+editor_draw_limits = true
 
 [node name="ExtraLive2" parent="." instance=ExtResource("8_m6gru")]
 position = Vector2(559, 284)
@@ -109,5 +122,25 @@ position = Vector2(559, 284)
 [node name="ExtraLive" parent="." instance=ExtResource("8_m6gru")]
 position = Vector2(381, 354)
 
-[node name="HealthBar" parent="." instance=ExtResource("13_6ev8c")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthBar" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("13_6ev8c")]
 position = Vector2(20, 20)
+player = NodePath("../../BombGuy")
+
+[node name="TouchScreenControl" parent="CanvasLayer" instance=ExtResource("25_cau7u")]
+
+[node name="GameOverDialog" parent="CanvasLayer" instance=ExtResource("25_26ih6")]
+
+[node name="PauseDialog" parent="CanvasLayer" instance=ExtResource("27_ua01x")]
+
+[node name="VictoryDialog" parent="CanvasLayer" instance=ExtResource("28_53idx")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_3nw4o")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
+
+[connection signal="game_over" from="BombGuy" to="CanvasLayer/GameOverDialog" method="_on_game_over"]
+[connection signal="victory" from="BombGuy" to="CanvasLayer/VictoryDialog" method="_on_victory"]

@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 func _ready():
 	animated_sprite.play()
-	floor_snap_length = 30
+	floor_snap_length = 50
 	collision_layer = 0
 	collision_mask = 1
 
@@ -17,4 +17,3 @@ func _physics_process(_delta: float):
 
 func _on_sprite_2d_animation_finished():
 	queue_free()
-

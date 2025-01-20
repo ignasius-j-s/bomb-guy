@@ -12,6 +12,13 @@ extends CharacterBody2D
 @onready var state_machine: StateMachine = $StateMachine
 @onready var facing_timer: Timer = $FacingTimer
 
+var RunParticleScene: PackedScene = preload("res://scenes/particles/run_particle.tscn")
+var run_particle_delay = 0
+
+var sfx_player = AudioStreamPlayer.new()
+var step_sfx_stream = preload("res://assets/Audio/Step.wav")
+
+
 signal get_hit
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -30,6 +37,11 @@ var move_direction: int = 1:
 			jump_delay = 0
 
 
+func _ready() -> void:
+	sfx_player.stream = step_sfx_stream
+	get_tree().root.add_child.call_deferred(sfx_player)
+
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -39,9 +51,25 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
+	run_particle(delta)
 	move_and_slide()
 	apply_torque_impulse_to_bomb()
 	jump_delay = min(0.4, jump_delay + delta)
+
+
+func run_particle(delta):
+	if is_running() and run_particle_delay <= 0:
+		var shift_x = -4
+		var particle: Particles = RunParticleScene.instantiate()
+		particle.position = position
+		particle.scale.x *= move_direction
+		shift_x *= move_direction
+		particle.position.x += shift_x
+		get_tree().root.add_child(particle)
+		sfx_player.play()
+		run_particle_delay = 0.45
+	else:
+		run_particle_delay = run_particle_delay - delta
 
 
 func apply_torque_impulse_to_bomb():
@@ -62,3 +90,7 @@ func is_running() -> bool:
 
 func can_jump() -> bool:
 	return jump_delay > 0.2 && is_on_floor()
+
+
+func _on_get_hit():
+	pass

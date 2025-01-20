@@ -9,12 +9,14 @@ extends CharacterBody2D
 
 const BOMB_DIRECTION: Vector2 = Vector2(0.65, -0.55) * 70
 
+#var heal_sfx: AudioStreamPlayer = AudioStreamPlayer = load
 var BombScene: PackedScene = preload("res://scenes/objects/bomb.tscn")
 var RunParticleScene: PackedScene = preload("res://scenes/particles/run_particle.tscn")
 
+signal victory
+signal game_over
 signal get_hit
 signal get_extra_live
-signal game_over
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -24,6 +26,8 @@ var invisible: bool = false
 var run_particle_delay = 0
 
 func _ready() -> void:
+	get_hit.connect(_on_get_hit)
+	get_extra_live.connect(_on_get_extra_live)
 	$ChargingBar.hide()
 	play_tween()
 
@@ -41,7 +45,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
 	run_particle(delta)
-
 	update_facing_animation()
 	move_and_slide()
 
@@ -58,9 +61,10 @@ func run_particle(delta):
 
 		particle.position.x += shift_x
 		get_tree().root.add_child(particle)
+		$StepSfx.play()
 		run_particle_delay = 0.45
 	else:
-		run_particle_delay = max(0, run_particle_delay - delta)
+		run_particle_delay = run_particle_delay - delta
 
 
 func update_facing_animation():
@@ -113,4 +117,17 @@ func _on_get_hit() -> void:
 
 
 func _on_get_extra_live() -> void:
-	lives = min(3, lives + 1)
+	if lives < 3:
+		$HealSfx.play()
+		lives += 1
+
+
+func door_in():
+	floor_snap_length = 60
+	apply_floor_snap()
+	state_machine.current_state.can_move = false
+	animated_sprite.play("door_in")
+	await animated_sprite.animation_finished
+	self.hide()
+	victory.emit()
+	

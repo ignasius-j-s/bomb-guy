@@ -3,7 +3,15 @@ extends State
 
 @export var ground_state: State
 
+var sfx_player = AudioStreamPlayer.new()
+var hurt_sfx_stream = preload("res://assets/Audio/Hurt.ogg")
+
+func _ready():
+	sfx_player.stream = hurt_sfx_stream
+	get_tree().root.add_child.call_deferred(sfx_player)
+
 func on_enter() -> void:
+	sfx_player.play()
 	if character.is_dead():
 		animated_sprite.play("dead")
 	else:
@@ -20,8 +28,5 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		await get_tree().create_timer(0.1).timeout
 		next_state = ground_state
 	elif animated_sprite.animation == "dead":
-		character.game_over.emit()
-
-		# TODO: Do something else
 		await get_tree().create_timer(0.1).timeout
-		next_state = ground_state
+		character.game_over.emit()
