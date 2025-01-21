@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://dnn5xgxx8aglk"]
+[gd_scene load_steps=5 format=4 uid="uid://dnn5xgxx8aglk"]
 
 [ext_resource type="Script" path="res://scripts/Ui/LevelMenu.gd" id="1_3f1y5"]
 [ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resources/tile_set.tres" id="1_jtvlg"]
-[ext_resource type="PackedScene" uid="uid://1c7iyh1b0kxs" path="res://scenes/levels/test_level.tscn" id="2_vcoy6"]
+[ext_resource type="PackedScene" uid="uid://fo3jds8e5h66" path="res://scenes/levels/level_1.tscn" id="2_ok0q4"]
+[ext_resource type="PackedScene" uid="uid://bsbsbck21jp8m" path="res://scenes/levels/level_2.tscn" id="3_7kt2k"]
 
 [node name="Level Menu" type="Control"]
 layout_mode = 3
@@ -12,7 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3f1y5")
-test_level_scene = ExtResource("2_vcoy6")
+levels = Array[PackedScene]([ExtResource("2_ok0q4"), ExtResource("3_7kt2k"), null, null, null, null, null])
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -115,5 +116,12 @@ offset_bottom = 95.0
 theme_override_font_sizes/font_size = 35
 text = "Test"
 
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Level1" to="." method="_goto_level_1"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Level2" to="." method="_goto_level_2"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Level3" to="." method="_goto_level_3"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Level4" to="." method="_goto_level_4"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer2/Level5" to="." method="_goto_level_5"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer2/Level6" to="." method="_goto_level_6"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer2/Level7" to="." method="_goto_level_7"]
 [connection signal="button_up" from="BackButton" to="." method="_back_to_main_menu"]
 [connection signal="button_up" from="TestButton" to="." method="_on_test_released"]

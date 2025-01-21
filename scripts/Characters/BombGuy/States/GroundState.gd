@@ -17,7 +17,7 @@ func _ready():
 func state_input(event: InputEvent):
 	if event.is_action_pressed("move_jump"):
 		jump()
-	elif event.is_action_pressed("throw_bomb"):
+	elif event.is_action_pressed("throw_bomb") and animated_sprite.animation != "door_in":
 		next_state = throw_state
 
 

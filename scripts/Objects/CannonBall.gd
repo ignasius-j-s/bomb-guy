@@ -12,6 +12,6 @@ func _ready() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is BombGuy:
 		body.get_hit.emit()
-	elif body is TileMap:
+	elif body is TileMapLayer:
 		queue_free()
 		tween.kill()

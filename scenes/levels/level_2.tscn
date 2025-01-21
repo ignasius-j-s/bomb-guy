@@ -1,34 +1,33 @@
-[gd_scene load_steps=30 format=4 uid="uid://1c7iyh1b0kxs"]
+[gd_scene load_steps=29 format=4 uid="uid://bsbsbck21jp8m"]
 
-[ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resources/tile_set.tres" id="1_0n32e"]
-[ext_resource type="PackedScene" uid="uid://b801kesmy85o" path="res://scenes/objects/chair.tscn" id="2_7bwpn"]
-[ext_resource type="PackedScene" uid="uid://b2twnlmh4mwrp" path="res://scenes/characters/bomb_guy.tscn" id="2_dw13o"]
-[ext_resource type="PackedScene" uid="uid://b3dfvawl62ij5" path="res://scenes/objects/candle.tscn" id="3_4byje"]
-[ext_resource type="PackedScene" uid="uid://c4fqw68qv1dcb" path="res://scenes/objects/bomb.tscn" id="3_bbfbb"]
-[ext_resource type="PackedScene" uid="uid://ygxxiw041twk" path="res://scenes/objects/door.tscn" id="3_uexpy"]
-[ext_resource type="PackedScene" uid="uid://srbt7r2gpmpc" path="res://scenes/objects/window.tscn" id="4_5ar2f"]
-[ext_resource type="PackedScene" uid="uid://s167dr4pukgg" path="res://scenes/objects/barrel.tscn" id="5_3cpb1"]
-[ext_resource type="PackedScene" uid="uid://dra6weoquvwgu" path="res://scenes/objects/cannon.tscn" id="6_0u5f1"]
-[ext_resource type="PackedScene" uid="uid://dadl244p0e4uc" path="res://scenes/objects/desk.tscn" id="6_rffrq"]
-[ext_resource type="PackedScene" uid="uid://dsx4uln2qcgb7" path="res://scenes/objects/small_chain.tscn" id="8_006ub"]
-[ext_resource type="PackedScene" uid="uid://cofukykr55kh" path="res://scenes/extra_live.tscn" id="8_m6gru"]
-[ext_resource type="PackedScene" uid="uid://5edg5bmt3ael" path="res://scenes/objects/big_chain.tscn" id="9_54yvy"]
-[ext_resource type="PackedScene" uid="uid://do0g8mmjjlxyk" path="res://scenes/characters/cucumber.tscn" id="10_ieh46"]
-[ext_resource type="PackedScene" uid="uid://bl33vfkxvtami" path="res://scenes/characters/bald_pirate.tscn" id="11_f7xhv"]
-[ext_resource type="PackedScene" uid="uid://hehyt4gn67hk" path="res://scenes/characters/captain.tscn" id="12_5xjqe"]
-[ext_resource type="PackedScene" uid="uid://66eqavs70a46" path="res://scenes/objects/green_bottle.tscn" id="12_kjyre"]
-[ext_resource type="PackedScene" uid="uid://cu48fnhoqv58h" path="res://scenes/objects/red_bottle.tscn" id="12_xo25d"]
-[ext_resource type="PackedScene" uid="uid://c4sdc58617fy4" path="res://scenes/health_bar.tscn" id="13_6ev8c"]
-[ext_resource type="PackedScene" uid="uid://cjvr35nfy8il" path="res://scenes/characters/whale.tscn" id="15_0o17o"]
-[ext_resource type="PackedScene" uid="uid://c8oj2k20sslny" path="res://scenes/characters/big_guy.tscn" id="16_gh7ws"]
-[ext_resource type="PackedScene" uid="uid://dpho7eey1kwli" path="res://scenes/objects/skull.tscn" id="18_61ojp"]
-[ext_resource type="PackedScene" uid="uid://cvbtt2b3aqrxn" path="res://scenes/objects/blue_bottle.tscn" id="21_d0c5a"]
-[ext_resource type="PackedScene" uid="uid://dsmvp7ds78ack" path="res://scenes/ui/game_over_dialog.tscn" id="25_26ih6"]
-[ext_resource type="PackedScene" uid="uid://cvcc7klo4r57c" path="res://scenes/touch_screen_control.tscn" id="25_cau7u"]
-[ext_resource type="AudioStream" uid="uid://5csa41sf2vsv" path="res://assets/Audio/Music1.ogg" id="27_3nw4o"]
-[ext_resource type="PackedScene" uid="uid://cj17fc8tdujcl" path="res://scenes/ui/pause_dialog.tscn" id="27_ua01x"]
-[ext_resource type="PackedScene" uid="uid://b3fa2nnd5fn8t" path="res://scenes/ui/victory_dialog.tscn" id="28_53idx"]
-[ext_resource type="PackedScene" uid="uid://csu2a1yg4b8tn" path="res://scenes/ui/main_menu.tscn" id="28_mya6q"]
+[ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resources/tile_set.tres" id="1_nwa57"]
+[ext_resource type="PackedScene" uid="uid://b801kesmy85o" path="res://scenes/objects/chair.tscn" id="2_sv8ju"]
+[ext_resource type="PackedScene" uid="uid://srbt7r2gpmpc" path="res://scenes/objects/window.tscn" id="3_sf3dn"]
+[ext_resource type="PackedScene" uid="uid://s167dr4pukgg" path="res://scenes/objects/barrel.tscn" id="4_ga7kv"]
+[ext_resource type="PackedScene" uid="uid://dadl244p0e4uc" path="res://scenes/objects/desk.tscn" id="5_6b3qx"]
+[ext_resource type="PackedScene" uid="uid://b3dfvawl62ij5" path="res://scenes/objects/candle.tscn" id="6_wyg8q"]
+[ext_resource type="PackedScene" uid="uid://ygxxiw041twk" path="res://scenes/objects/door.tscn" id="7_fxgco"]
+[ext_resource type="PackedScene" uid="uid://dra6weoquvwgu" path="res://scenes/objects/cannon.tscn" id="8_7e8pg"]
+[ext_resource type="PackedScene" uid="uid://dsx4uln2qcgb7" path="res://scenes/objects/small_chain.tscn" id="9_ywc8a"]
+[ext_resource type="PackedScene" uid="uid://5edg5bmt3ael" path="res://scenes/objects/big_chain.tscn" id="10_tupi2"]
+[ext_resource type="PackedScene" uid="uid://cvbtt2b3aqrxn" path="res://scenes/objects/blue_bottle.tscn" id="11_crp4f"]
+[ext_resource type="PackedScene" uid="uid://66eqavs70a46" path="res://scenes/objects/green_bottle.tscn" id="12_2qdah"]
+[ext_resource type="PackedScene" uid="uid://cu48fnhoqv58h" path="res://scenes/objects/red_bottle.tscn" id="13_r02e8"]
+[ext_resource type="PackedScene" uid="uid://c4fqw68qv1dcb" path="res://scenes/objects/bomb.tscn" id="14_c46bh"]
+[ext_resource type="PackedScene" uid="uid://dpho7eey1kwli" path="res://scenes/objects/skull.tscn" id="15_v71ny"]
+[ext_resource type="PackedScene" uid="uid://bl33vfkxvtami" path="res://scenes/characters/bald_pirate.tscn" id="16_m7muc"]
+[ext_resource type="PackedScene" uid="uid://hehyt4gn67hk" path="res://scenes/characters/captain.tscn" id="17_3wjuj"]
+[ext_resource type="PackedScene" uid="uid://cjvr35nfy8il" path="res://scenes/characters/whale.tscn" id="18_ffrdj"]
+[ext_resource type="PackedScene" uid="uid://do0g8mmjjlxyk" path="res://scenes/characters/cucumber.tscn" id="19_yyssm"]
+[ext_resource type="PackedScene" uid="uid://c8oj2k20sslny" path="res://scenes/characters/big_guy.tscn" id="20_i3tqw"]
+[ext_resource type="PackedScene" uid="uid://b2twnlmh4mwrp" path="res://scenes/characters/bomb_guy.tscn" id="21_4g8bq"]
+[ext_resource type="PackedScene" uid="uid://cofukykr55kh" path="res://scenes/extra_live.tscn" id="22_pbnrc"]
+[ext_resource type="PackedScene" uid="uid://c4sdc58617fy4" path="res://scenes/health_bar.tscn" id="23_6rdx3"]
+[ext_resource type="PackedScene" uid="uid://cvcc7klo4r57c" path="res://scenes/touch_screen_control.tscn" id="24_6pqeh"]
+[ext_resource type="PackedScene" uid="uid://dsmvp7ds78ack" path="res://scenes/ui/game_over_dialog.tscn" id="25_gpigt"]
+[ext_resource type="PackedScene" uid="uid://cj17fc8tdujcl" path="res://scenes/ui/pause_dialog.tscn" id="26_bjco6"]
+[ext_resource type="PackedScene" uid="uid://b3fa2nnd5fn8t" path="res://scenes/ui/victory_dialog.tscn" id="27_4r0d3"]
+[ext_resource type="PackedScene" uid="uid://rn17txbxy60k" path="res://scenes/bgm.tscn" id="28_jgw20"]
 
 [node name="TestLevel" type="Node2D"]
 
@@ -37,78 +36,80 @@
 [node name="Layer0" type="TileMapLayer" parent="Platform"]
 use_parent_material = true
 tile_map_data = PackedByteArray("AAAAAAAAAAADAAAAAAAAAAEAAAADAAEAAAAAAAIAAAADAAEAAAAAAAMAAAADAAEAAAAAAAQAAAADAAEAAAAAAAUAAAADAAEAAAAAAAYAAAADAAEAAAAAAAcAAAADAAEAAAAAAAgAAAADAAEAAAAAAAkAAAADAAEAAAAAAAoAAAADAAEAAAAAAAsAAAADAAIAAAATAAsAAAAFAAIAAAATAAAAAAAFAAAAAAATAAEAAAAFAAEAAAATAAIAAAAFAAEAAAATAAMAAAAFAAEAAAATAAQAAAAFAAEAAAATAAUAAAAFAAEAAAATAAYAAAAFAAEAAAATAAcAAAAFAAEAAAATAAgAAAAFAAEAAAATAAkAAAAFAAEAAAATAAoAAAAFAAEAAAABAAAAAAAEAAAAAAACAAAAAAAEAAAAAAADAAAAAAAEAAAAAAAEAAAAAAAEAAAAAAAFAAAAAAAEAAAAAAAGAAAAAAAEAAAAAAAHAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAJAAAAAAAEAAAAAAAKAAAAAAAEAAAAAAALAAAAAAAEAAAAAAAMAAAAAAAEAAAAAAANAAAAAAAEAAAAAAAOAAAAAAAEAAAAAAAPAAAAAAAEAAAAAAAQAAAAAAAEAAAAAAARAAAAAAAEAAAAAAASAAAAAAAEAAAAAAAFAAEAAAAEAAEAAAAGAAEAAAAEAAEAAAAHAAEAAAAEAAEAAAAIAAEAAAAEAAEAAAAJAAEAAAAEAAEAAAAKAAEAAAAEAAEAAAALAAEAAAAEAAEAAAAMAAEAAAAEAAEAAAANAAEAAAAEAAEAAAAOAAEAAAAEAAEAAAAPAAEAAAAEAAEAAAAQAAEAAAAEAAEAAAARAAEAAAAEAAEAAAASAAEAAAAEAAEAAAABAAIAAAAEAAEAAAACAAIAAAAEAAEAAAADAAIAAAAEAAEAAAAEAAIAAAAEAAEAAAAIAAIAAAAEAAEAAAAJAAIAAAAEAAEAAAAKAAIAAAAEAAEAAAALAAIAAAAEAAEAAAAMAAIAAAAEAAEAAAANAAIAAAAEAAEAAAAOAAIAAAAEAAEAAAAPAAIAAAAEAAEAAAAQAAIAAAAEAAEAAAARAAIAAAAEAAEAAAASAAIAAAAEAAEAAAABAAEAAAAEAAEAAAACAAEAAAAEAAEAAAADAAEAAAAEAAEAAAAEAAEAAAAEAAEAAAAFAAIAAAAEAAEAAAAGAAIAAAAEAAEAAAAHAAIAAAAEAAEAAAABAAMAAAAEAAEAAAABAAQAAAAEAAEAAAABAAUAAAAEAAEAAAABAAYAAAAEAAEAAAABAAcAAAAEAAEAAAABAAgAAAAEAAEAAAABAAkAAAAEAAEAAAABAAoAAAAEAAEAAAACAAMAAAAEAAEAAAACAAQAAAAEAAEAAAACAAUAAAAEAAEAAAACAAYAAAAEAAEAAAACAAcAAAAEAAEAAAACAAgAAAAEAAEAAAACAAkAAAAEAAEAAAACAAoAAAAEAAEAAAADAAMAAAAEAAEAAAADAAQAAAAEAAEAAAADAAUAAAAEAAEAAAADAAYAAAAEAAEAAAADAAcAAAAEAAEAAAADAAgAAAAEAAEAAAADAAkAAAAEAAEAAAADAAoAAAAEAAEAAAAEAAMAAAAEAAEAAAAEAAQAAAAEAAEAAAAEAAUAAAAEAAEAAAAEAAYAAAAEAAEAAAAEAAcAAAAEAAEAAAAEAAgAAAAEAAEAAAAEAAkAAAAEAAEAAAAEAAoAAAAEAAEAAAAFAAMAAAAEAAEAAAAFAAQAAAAEAAEAAAAFAAUAAAAEAAEAAAAFAAYAAAAEAAEAAAAFAAcAAAAEAAEAAAAFAAgAAAAEAAEAAAAFAAkAAAAEAAEAAAAFAAoAAAAEAAEAAAAGAAMAAAAEAAEAAAAGAAQAAAAEAAEAAAAGAAUAAAAEAAEAAAAGAAYAAAAEAAEAAAAGAAcAAAAEAAEAAAAGAAgAAAAEAAEAAAAGAAkAAAAEAAEAAAAGAAoAAAAEAAEAAAAHAAMAAAAEAAEAAAAHAAQAAAAEAAEAAAAHAAUAAAAEAAEAAAAHAAYAAAAEAAEAAAAHAAcAAAAEAAEAAAAHAAgAAAAEAAEAAAAHAAkAAAAEAAEAAAAHAAoAAAAEAAEAAAAIAAMAAAAEAAEAAAAIAAQAAAAEAAEAAAAIAAUAAAAEAAEAAAAIAAYAAAAEAAEAAAAIAAcAAAAEAAEAAAAIAAgAAAAEAAEAAAAIAAkAAAAEAAEAAAAIAAoAAAAEAAEAAAAJAAMAAAAEAAEAAAAJAAQAAAAEAAEAAAAJAAUAAAAEAAEAAAAJAAYAAAAEAAEAAAAJAAcAAAAEAAEAAAAJAAgAAAAEAAEAAAAJAAkAAAAEAAEAAAAJAAoAAAAEAAEAAAAKAAMAAAAEAAEAAAAKAAQAAAAEAAEAAAAKAAUAAAAEAAEAAAAKAAYAAAAEAAEAAAAKAAcAAAAEAAEAAAAKAAgAAAAEAAEAAAAKAAkAAAAEAAEAAAAKAAoAAAAEAAEAAAALAAMAAAAEAAEAAAALAAQAAAAEAAEAAAALAAUAAAAEAAEAAAALAAYAAAAEAAEAAAALAAcAAAAEAAEAAAALAAgAAAAEAAEAAAALAAkAAAAEAAEAAAALAAoAAAAEAAEAAAAMAAMAAAAEAAEAAAAMAAQAAAAEAAEAAAAMAAUAAAAEAAEAAAAMAAYAAAAEAAEAAAAMAAcAAAAEAAEAAAAMAAgAAAAEAAEAAAAMAAkAAAAEAAEAAAAMAAoAAAAEAAEAAAANAAMAAAAEAAEAAAANAAQAAAAEAAEAAAANAAUAAAAEAAEAAAANAAYAAAAEAAEAAAANAAcAAAAEAAEAAAANAAgAAAAEAAEAAAANAAkAAAAEAAEAAAANAAoAAAAEAAEAAAAOAAMAAAAEAAEAAAAOAAQAAAAEAAEAAAAOAAUAAAAEAAEAAAAOAAYAAAAEAAEAAAAOAAcAAAAEAAEAAAAOAAgAAAAEAAEAAAAOAAkAAAAEAAEAAAAOAAoAAAAEAAEAAAAPAAMAAAAEAAEAAAAPAAQAAAAEAAEAAAAPAAUAAAAEAAEAAAAPAAYAAAAEAAEAAAAPAAcAAAAEAAEAAAAPAAgAAAAEAAEAAAAPAAkAAAAEAAEAAAAPAAoAAAAEAAEAAAAQAAMAAAAEAAEAAAAQAAQAAAAEAAEAAAAQAAUAAAAEAAEAAAAQAAYAAAAEAAEAAAAQAAcAAAAEAAEAAAAQAAgAAAAEAAEAAAAQAAkAAAAEAAEAAAAQAAoAAAAEAAEAAAARAAMAAAAEAAEAAAARAAQAAAAEAAEAAAARAAUAAAAEAAEAAAARAAYAAAAEAAEAAAARAAcAAAAEAAEAAAARAAgAAAAEAAEAAAARAAkAAAAEAAEAAAARAAoAAAAEAAEAAAASAAMAAAAEAAEAAAASAAQAAAAEAAEAAAASAAUAAAAEAAEAAAASAAYAAAAEAAEAAAASAAcAAAAEAAEAAAASAAgAAAAEAAEAAAASAAkAAAAEAAEAAAASAAoAAAAEAAEAAAABAAsAAAAEAAIAAAACAAsAAAAEAAIAAAADAAsAAAAEAAIAAAAEAAsAAAAEAAIAAAAFAAsAAAAEAAIAAAAGAAsAAAAEAAIAAAAHAAsAAAAEAAIAAAAIAAsAAAAEAAIAAAAJAAsAAAAEAAIAAAAKAAsAAAAEAAIAAAALAAsAAAAEAAIAAAAMAAsAAAAEAAIAAAANAAsAAAAEAAIAAAAOAAsAAAAEAAIAAAAPAAsAAAAEAAIAAAAQAAsAAAAEAAIAAAARAAsAAAAEAAIAAAASAAsAAAAEAAIAAAA=")
-tile_set = ExtResource("1_0n32e")
+tile_set = ExtResource("1_nwa57")
 
 [node name="Layer1" type="TileMapLayer" parent="Platform"]
 use_parent_material = true
 tile_map_data = PackedByteArray("AAACAAoAAAABAAAAAAADAAoAAAABAAAAAAAEAAoAAAABAAAAAAAFAAoAAAABAAAAAAAGAAoAAAABAAAAAAAHAAoAAAABAAAAAAAIAAoAAAABAAAAAAAJAAoAAAABAAAAAAAKAAoAAAABAAAAAAALAAoAAAABAAAAAAAMAAoAAAABAAAAAAANAAoAAAABAAAAAAAOAAoAAAABAAAAAAAPAAoAAAABAAAAAAAQAAoAAAABAAAAAAAIAAcAAAAFAAMAAAAJAAcAAAAFAAMAAAABAAkAAAACAAEAAAABAAgAAAACAAEAAAABAAcAAAACAAEAAAABAAYAAAACAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAEAAAAAAAgAAAAAAAEAAAAAAAkAAAAAAAEAAAAAAAoAAAABAAQAAAABAAoAAAAAAAQAAAAKAAcAAAAEAAQAAAACAAYAAAAFAAMAAAADAAYAAAAEAAQAAAAOAAgAAAAFAAQAAAAMAAcAAAAFAAQAAAATAAIAAAABAAAAAAASAAIAAAABAAAAAAARAAIAAAAAAAAAAAARAAMAAAAAAAEAAAARAAQAAAAAAAEAAAARAAUAAAAAAAEAAAARAAYAAAAAAAEAAAARAAcAAAAAAAEAAAARAAgAAAAAAAEAAAARAAkAAAAAAAEAAAARAAoAAAABAAQAAAASAAMAAAABAAEAAAATAAMAAAABAAEAAAASAAQAAAABAAEAAAATAAQAAAABAAEAAAASAAUAAAABAAEAAAATAAUAAAABAAEAAAASAAYAAAABAAEAAAATAAYAAAABAAEAAAATAAcAAAABAAEAAAATAAgAAAABAAEAAAASAAoAAAABAAEAAAASAAkAAAABAAEAAAASAAgAAAABAAEAAAASAAcAAAABAAEAAAATAAkAAAABAAEAAAATAAoAAAABAAEAAAAQAAcAAAAFAAMAAAAPAAcAAAAEAAMAAAAOAAYAAAAEAAQAAAANAAYAAAAEAAMAAAALAAUAAAAEAAQAAAAKAAUAAAAFAAMAAAAJAAUAAAAEAAMAAAAQAAMAAAAEAAMAAAANAAQAAAAEAAMAAAAOAAQAAAAEAAQAAAAHAAcAAAAEAAMAAAABAAsAAAABAAEAAAAAAAsAAAABAAEAAAACAAsAAAABAAEAAAADAAsAAAABAAEAAAAEAAsAAAABAAEAAAAFAAsAAAABAAEAAAAGAAsAAAABAAEAAAAHAAsAAAABAAEAAAAIAAsAAAABAAEAAAAJAAsAAAABAAEAAAAKAAsAAAABAAEAAAALAAsAAAABAAEAAAAMAAsAAAABAAEAAAANAAsAAAABAAEAAAAOAAsAAAABAAEAAAAPAAsAAAABAAEAAAAQAAsAAAABAAEAAAARAAsAAAABAAEAAAASAAsAAAABAAEAAAATAAsAAAABAAEAAAD//wUAAAACAAEAAAD//wQAAAACAAEAAAD//wMAAAACAAEAAAD//wIAAAACAAEAAAD//wEAAAACAAEAAAD//wAAAAACAAEAAAAAAP//AAABAAIAAAABAP//AAABAAIAAAACAP//AAABAAIAAAADAP//AAABAAIAAAAEAP//AAABAAIAAAAFAP//AAABAAIAAAAGAP//AAABAAIAAAAHAP//AAABAAIAAAAIAP//AAABAAIAAAAJAP//AAABAAIAAAAKAP//AAABAAIAAAALAP//AAABAAIAAAAMAP//AAABAAIAAAANAP//AAABAAIAAAAOAP//AAABAAIAAAAPAP//AAABAAIAAAAQAP//AAABAAIAAAARAP//AAABAAIAAAASAP//AAABAAIAAAATAP//AAABAAIAAAAUAAAAAAAAAAEAAAAUAAEAAAAAAAEAAAAUAAIAAAAAAAEAAAAUAAMAAAAAAAEAAAAUAAQAAAAAAAEAAAAUAAUAAAAAAAEAAAAUAAYAAAAAAAEAAAAUAAcAAAAAAAEAAAAUAAgAAAAAAAEAAAAUAAkAAAAAAAEAAAAUAAoAAAAAAAEAAAAUAAsAAAAAAAEAAAA=")
-tile_set = ExtResource("1_0n32e")
+tile_set = ExtResource("1_nwa57")
 
 [node name="Objects" type="Node2D" parent="."]
 
-[node name="Chair" parent="Objects" instance=ExtResource("2_7bwpn")]
+[node name="Chair" parent="Objects" instance=ExtResource("2_sv8ju")]
 position = Vector2(477, 420)
 
-[node name="Window" parent="Objects" instance=ExtResource("4_5ar2f")]
+[node name="Window" parent="Objects" instance=ExtResource("3_sf3dn")]
 position = Vector2(460, 241)
 
-[node name="Barrel" parent="Objects" instance=ExtResource("5_3cpb1")]
+[node name="Barrel" parent="Objects" instance=ExtResource("4_ga7kv")]
 position = Vector2(859, 618)
 
-[node name="Desk" parent="Objects" instance=ExtResource("6_rffrq")]
+[node name="Desk" parent="Objects" instance=ExtResource("5_6b3qx")]
 position = Vector2(636, 624)
 
-[node name="Candle" parent="Objects" instance=ExtResource("3_4byje")]
+[node name="Candle" parent="Objects" instance=ExtResource("6_wyg8q")]
 position = Vector2(613, 592)
 
-[node name="Door" parent="Objects" instance=ExtResource("3_uexpy")]
+[node name="Door" parent="Objects" instance=ExtResource("7_fxgco")]
 position = Vector2(1183, 80)
 
-[node name="Cannon" parent="Objects" instance=ExtResource("6_0u5f1")]
+[node name="Cannon" parent="Objects" instance=ExtResource("8_7e8pg")]
 position = Vector2(757, 608)
 
-[node name="Cannon3" parent="Objects" instance=ExtResource("6_0u5f1")]
+[node name="Cannon3" parent="Objects" instance=ExtResource("8_7e8pg")]
 position = Vector2(632, 288)
 scale = Vector2(-1, 1)
 
-[node name="SmallChain" parent="Objects" instance=ExtResource("8_006ub")]
+[node name="SmallChain" parent="Objects" instance=ExtResource("9_ywc8a")]
 position = Vector2(143, 393)
 
-[node name="BigChain" parent="Objects" instance=ExtResource("9_54yvy")]
+[node name="BigChain" parent="Objects" instance=ExtResource("10_tupi2")]
 position = Vector2(557, 457)
 
-[node name="BlueBottle" parent="Objects" instance=ExtResource("21_d0c5a")]
+[node name="BlueBottle" parent="Objects" instance=ExtResource("11_crp4f")]
 position = Vector2(99, 332)
 
-[node name="GreenBottle" parent="Objects" instance=ExtResource("12_kjyre")]
+[node name="GreenBottle" parent="Objects" instance=ExtResource("12_2qdah")]
 position = Vector2(219, 342)
 
-[node name="RedBottle" parent="Objects" instance=ExtResource("12_xo25d")]
+[node name="RedBottle" parent="Objects" instance=ExtResource("13_r02e8")]
 position = Vector2(203, 359)
 
-[node name="Bomb" parent="Objects" instance=ExtResource("3_bbfbb")]
+[node name="Bomb" parent="Objects" instance=ExtResource("14_c46bh")]
 position = Vector2(176, 346)
 
-[node name="Skull" parent="Objects" instance=ExtResource("18_61ojp")]
+[node name="Skull" parent="Objects" instance=ExtResource("15_v71ny")]
 position = Vector2(418, 392)
 max_contacts_reported = 4
 
-[node name="BaldPirate" parent="." instance=ExtResource("11_f7xhv")]
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="BaldPirate" parent="Enemies" instance=ExtResource("16_m7muc")]
 position = Vector2(335, 567)
 
-[node name="Captain" parent="." instance=ExtResource("12_5xjqe")]
+[node name="Captain" parent="Enemies" instance=ExtResource("17_3wjuj")]
 position = Vector2(833, 597)
 
-[node name="Whale" parent="." instance=ExtResource("15_0o17o")]
+[node name="Whale" parent="Enemies" instance=ExtResource("18_ffrdj")]
 position = Vector2(894, 220)
 
-[node name="Cucumber" parent="." instance=ExtResource("10_ieh46")]
+[node name="Cucumber" parent="Enemies" instance=ExtResource("19_yyssm")]
 position = Vector2(1061, 143)
 
-[node name="BigGuy" parent="." instance=ExtResource("16_gh7ws")]
+[node name="BigGuy" parent="Enemies" instance=ExtResource("20_i3tqw")]
 position = Vector2(597, 406)
 
-[node name="BombGuy" parent="." instance=ExtResource("2_dw13o")]
+[node name="BombGuy" parent="." instance=ExtResource("21_4g8bq")]
 position = Vector2(70, 333)
 
 [node name="Camera2D" type="Camera2D" parent="BombGuy"]
@@ -119,33 +120,27 @@ limit_bottom = 720
 position_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="ExtraLive2" parent="." instance=ExtResource("8_m6gru")]
+[node name="ExtraLive2" parent="." instance=ExtResource("22_pbnrc")]
 position = Vector2(559, 284)
 
-[node name="ExtraLive" parent="." instance=ExtResource("8_m6gru")]
-position = Vector2(381, 354)
+[node name="ExtraLive" parent="." instance=ExtResource("22_pbnrc")]
+position = Vector2(555, 577)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
-[node name="HealthBar" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("13_6ev8c")]
+[node name="HealthBar" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("23_6rdx3")]
 position = Vector2(20, 20)
 player = NodePath("../../BombGuy")
 
-[node name="TouchScreenControl" parent="CanvasLayer" instance=ExtResource("25_cau7u")]
+[node name="TouchScreenControl" parent="CanvasLayer" instance=ExtResource("24_6pqeh")]
 
-[node name="GameOverDialog" parent="CanvasLayer" instance=ExtResource("25_26ih6")]
+[node name="GameOverDialog" parent="CanvasLayer" instance=ExtResource("25_gpigt")]
 
-[node name="PauseDialog" parent="CanvasLayer" instance=ExtResource("27_ua01x")]
+[node name="PauseDialog" parent="CanvasLayer" instance=ExtResource("26_bjco6")]
 
-[node name="VictoryDialog" parent="CanvasLayer" instance=ExtResource("28_53idx")]
-next_scene = ExtResource("28_mya6q")
+[node name="VictoryDialog" parent="CanvasLayer" instance=ExtResource("27_4r0d3")]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("27_3nw4o")
-volume_db = -20.0
-autoplay = true
-parameters/looping = true
+[node name="BGMPlayer" parent="." instance=ExtResource("28_jgw20")]
 
 [connection signal="game_over" from="BombGuy" to="CanvasLayer/GameOverDialog" method="_on_game_over"]
 [connection signal="victory" from="BombGuy" to="CanvasLayer/VictoryDialog" method="_on_victory"]
