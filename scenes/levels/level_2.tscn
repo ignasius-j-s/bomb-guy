@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bsbsbck21jp8m"]
+[gd_scene load_steps=30 format=4 uid="uid://bsbsbck21jp8m"]
 
 [ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resources/tile_set.tres" id="1_nwa57"]
 [ext_resource type="PackedScene" uid="uid://b801kesmy85o" path="res://scenes/objects/chair.tscn" id="2_sv8ju"]
@@ -28,8 +28,9 @@
 [ext_resource type="PackedScene" uid="uid://cj17fc8tdujcl" path="res://scenes/ui/pause_dialog.tscn" id="26_bjco6"]
 [ext_resource type="PackedScene" uid="uid://b3fa2nnd5fn8t" path="res://scenes/ui/victory_dialog.tscn" id="27_4r0d3"]
 [ext_resource type="PackedScene" uid="uid://rn17txbxy60k" path="res://scenes/bgm.tscn" id="28_jgw20"]
+[ext_resource type="PackedScene" uid="uid://bd4lrfw5yhyle" path="res://scenes/levels/level_3.tscn" id="28_q8f2c"]
 
-[node name="TestLevel" type="Node2D"]
+[node name="Level2" type="Node2D"]
 
 [node name="Platform" type="Node2D" parent="."]
 
@@ -139,6 +140,7 @@ player = NodePath("../../BombGuy")
 [node name="PauseDialog" parent="CanvasLayer" instance=ExtResource("26_bjco6")]
 
 [node name="VictoryDialog" parent="CanvasLayer" instance=ExtResource("27_4r0d3")]
+next_scene = ExtResource("28_q8f2c")
 
 [node name="BGMPlayer" parent="." instance=ExtResource("28_jgw20")]
 

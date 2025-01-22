@@ -98,6 +98,7 @@ limit_left = 0
 limit_top = 0
 limit_right = 2816
 limit_bottom = 960
+position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="Node2D" type="Node2D" parent="."]

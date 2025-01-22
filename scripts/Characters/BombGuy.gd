@@ -108,7 +108,7 @@ func on_invisible_timer_timeout() -> void:
 
 
 func _on_get_hit() -> void:
-	if not invisible:
+	if not invisible and animated_sprite.animation != "door_in":
 		lives = max(0, lives - 1)
 		state_machine.switch_state(hurt_state)
 		invisible = true
