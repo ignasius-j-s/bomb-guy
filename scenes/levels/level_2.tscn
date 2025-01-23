@@ -65,10 +65,10 @@ position = Vector2(613, 592)
 position = Vector2(1183, 80)
 
 [node name="Cannon" parent="Objects" instance=ExtResource("8_7e8pg")]
-position = Vector2(757, 608)
+position = Vector2(757, 616)
 
 [node name="Cannon3" parent="Objects" instance=ExtResource("8_7e8pg")]
-position = Vector2(632, 288)
+position = Vector2(632, 296)
 scale = Vector2(-1, 1)
 
 [node name="SmallChain" parent="Objects" instance=ExtResource("9_ywc8a")]

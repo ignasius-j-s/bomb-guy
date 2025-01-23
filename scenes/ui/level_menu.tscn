@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://dnn5xgxx8aglk"]
+[gd_scene load_steps=7 format=4 uid="uid://dnn5xgxx8aglk"]
 
 [ext_resource type="Script" path="res://scripts/Ui/LevelMenu.gd" id="1_3f1y5"]
 [ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resources/tile_set.tres" id="1_jtvlg"]
 [ext_resource type="PackedScene" uid="uid://fo3jds8e5h66" path="res://scenes/levels/level_1.tscn" id="2_ok0q4"]
 [ext_resource type="PackedScene" uid="uid://bsbsbck21jp8m" path="res://scenes/levels/level_2.tscn" id="3_7kt2k"]
 [ext_resource type="PackedScene" uid="uid://bd4lrfw5yhyle" path="res://scenes/levels/level_3.tscn" id="4_w0dri"]
+[ext_resource type="PackedScene" uid="uid://ddnpdm3qj4ek6" path="res://scenes/levels/level_4.tscn" id="5_arymh"]
 
 [node name="Level Menu" type="Control"]
 layout_mode = 3
@@ -14,7 +15,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3f1y5")
-levels = Array[PackedScene]([ExtResource("2_ok0q4"), ExtResource("3_7kt2k"), ExtResource("4_w0dri"), null, null, null, null])
+levels = Array[PackedScene]([ExtResource("2_ok0q4"), ExtResource("3_7kt2k"), ExtResource("4_w0dri"), ExtResource("5_arymh"), null, null])
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -64,16 +65,16 @@ size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
 text = "Level 3"
 
-[node name="Level4" type="Button" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 40
-text = "Level 4"
-
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 20
+
+[node name="Level4" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "Level 4"
 
 [node name="Level5" type="Button" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -86,12 +87,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
 text = "Level 6"
-
-[node name="Level7" type="Button" parent="VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 40
-text = "Level 7"
 
 [node name="BackButton" type="Button" parent="."]
 custom_minimum_size = Vector2(150, 75)
@@ -120,9 +115,8 @@ text = "Test"
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/Level1" to="." method="_goto_level_1"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/Level2" to="." method="_goto_level_2"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/Level3" to="." method="_goto_level_3"]
-[connection signal="button_up" from="VBoxContainer/HBoxContainer/Level4" to="." method="_goto_level_4"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer2/Level4" to="." method="_goto_level_4"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer2/Level5" to="." method="_goto_level_5"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer2/Level6" to="." method="_goto_level_6"]
-[connection signal="button_up" from="VBoxContainer/HBoxContainer2/Level7" to="." method="_goto_level_7"]
 [connection signal="button_up" from="BackButton" to="." method="_back_to_main_menu"]
 [connection signal="button_up" from="TestButton" to="." method="_on_test_released"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://bd4lrfw5yhyle"]
+[gd_scene load_steps=27 format=4 uid="uid://bd4lrfw5yhyle"]
 
 [ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resources/tile_set.tres" id="1_ontxv"]
 [ext_resource type="PackedScene" uid="uid://b2twnlmh4mwrp" path="res://scenes/characters/bomb_guy.tscn" id="1_q22yb"]
@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://do0g8mmjjlxyk" path="res://scenes/characters/cucumber.tscn" id="15_rjyts"]
 [ext_resource type="PackedScene" uid="uid://hehyt4gn67hk" path="res://scenes/characters/captain.tscn" id="16_mpdyl"]
 [ext_resource type="PackedScene" uid="uid://bl33vfkxvtami" path="res://scenes/characters/bald_pirate.tscn" id="17_rk1g4"]
+[ext_resource type="PackedScene" uid="uid://ddnpdm3qj4ek6" path="res://scenes/levels/level_4.tscn" id="25_ms57n"]
+[ext_resource type="PackedScene" uid="uid://rn17txbxy60k" path="res://scenes/bgm.tscn" id="26_1nqqy"]
 
 [node name="Level3" type="Node2D"]
 
@@ -77,7 +79,7 @@ position = Vector2(880, 865)
 position = Vector2(1777, 459)
 
 [node name="Cannon" parent="Objects" instance=ExtResource("9_yv727")]
-position = Vector2(3301, 480)
+position = Vector2(3301, 488)
 
 [node name="BlueBottle" parent="Objects" instance=ExtResource("10_jyggf")]
 position = Vector2(3102, 716)
@@ -148,6 +150,9 @@ player = NodePath("../../BombGuy")
 [node name="PauseDialog" parent="CanvasLayer" instance=ExtResource("5_ks26o")]
 
 [node name="VictoryDialog" parent="CanvasLayer" instance=ExtResource("6_5f1i5")]
+next_scene = ExtResource("25_ms57n")
+
+[node name="BGMPlayer" parent="." instance=ExtResource("26_1nqqy")]
 
 [connection signal="game_over" from="BombGuy" to="CanvasLayer/GameOverDialog" method="_on_game_over"]
 [connection signal="victory" from="BombGuy" to="CanvasLayer/VictoryDialog" method="_on_victory"]

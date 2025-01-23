@@ -75,14 +75,14 @@ size = Vector2(50, 43)
 script = ExtResource("1_q12fh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, 0)
+position = Vector2(2, -8)
 sprite_frames = SubResource("SpriteFrames_smd54")
 animation = &"attack"
 frame = 6
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, 10.5)
+position = Vector2(-2, 2.5)
 shape = SubResource("RectangleShape2D_hq6rj")
 
 [node name="Timer" type="Timer" parent="."]

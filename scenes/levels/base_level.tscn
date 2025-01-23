@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjjpbnndl1u2i"]
+
+[ext_resource type="PackedScene" uid="uid://c4sdc58617fy4" path="res://scenes/health_bar.tscn" id="1_yyjbq"]
+[ext_resource type="PackedScene" uid="uid://cvcc7klo4r57c" path="res://scenes/touch_screen_control.tscn" id="2_h6ppb"]
+[ext_resource type="PackedScene" uid="uid://dsmvp7ds78ack" path="res://scenes/ui/game_over_dialog.tscn" id="3_gldof"]
+[ext_resource type="PackedScene" uid="uid://cj17fc8tdujcl" path="res://scenes/ui/pause_dialog.tscn" id="4_tecrl"]
+[ext_resource type="PackedScene" uid="uid://b3fa2nnd5fn8t" path="res://scenes/ui/victory_dialog.tscn" id="5_yi0ip"]
+[ext_resource type="PackedScene" uid="uid://rn17txbxy60k" path="res://scenes/bgm.tscn" id="6_847i6"]
+[ext_resource type="PackedScene" uid="uid://b2twnlmh4mwrp" path="res://scenes/characters/bomb_guy.tscn" id="6_u3jvh"]
+
+[node name="BaseLevel" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthBar" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("1_yyjbq")]
+position = Vector2(20, 20)
+player = NodePath("../../BombGuy")
+
+[node name="TouchScreenControl" parent="CanvasLayer" instance=ExtResource("2_h6ppb")]
+
+[node name="GameOverDialog" parent="CanvasLayer" instance=ExtResource("3_gldof")]
+
+[node name="PauseDialog" parent="CanvasLayer" instance=ExtResource("4_tecrl")]
+
+[node name="VictoryDialog" parent="CanvasLayer" instance=ExtResource("5_yi0ip")]
+
+[node name="BGMPlayer" parent="CanvasLayer" instance=ExtResource("6_847i6")]
+
+[node name="Platform" type="Node2D" parent="."]
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="BombGuy" parent="." instance=ExtResource("6_u3jvh")]
+
+[node name="Camera2D" type="Camera2D" parent="BombGuy"]
+limit_left = 0
+limit_top = 0
+rotation_smoothing_enabled = true
+
+[connection signal="game_over" from="BombGuy" to="CanvasLayer/GameOverDialog" method="_on_game_over"]
+[connection signal="victory" from="BombGuy" to="CanvasLayer/VictoryDialog" method="_on_victory"]

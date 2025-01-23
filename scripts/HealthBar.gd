@@ -4,8 +4,8 @@ extends Sprite2D
 
 func _ready() -> void:
 	position = Vector2(20, 20)
-	player.get_hit.connect(update_health_bar)
-	player.get_extra_live.connect(update_health_bar)
+	player.get_hit.connect.call_deferred(update_health_bar)
+	player.get_extra_live.connect.call_deferred(update_health_bar)
 
 	update_health_bar()
 

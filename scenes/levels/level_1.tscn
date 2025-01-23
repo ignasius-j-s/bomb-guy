@@ -59,20 +59,20 @@ position = Vector2(1721, 880)
 position = Vector2(1643, 868)
 
 [node name="Cannon" parent="Objects" instance=ExtResource("7_0kkhy")]
-position = Vector2(2465, 864)
+position = Vector2(2465, 872)
 
 [node name="Cannon2" parent="Objects" instance=ExtResource("7_0kkhy")]
-position = Vector2(1697, 608)
+position = Vector2(1697, 616)
 
 [node name="Cannon3" parent="Objects" instance=ExtResource("7_0kkhy")]
-position = Vector2(1697, 672)
+position = Vector2(1697, 680)
 
 [node name="Cannon4" parent="Objects" instance=ExtResource("7_0kkhy")]
-position = Vector2(1758, 672)
+position = Vector2(1758, 680)
 scale = Vector2(-1, 1)
 
 [node name="Cannon5" parent="Objects" instance=ExtResource("7_0kkhy")]
-position = Vector2(1758, 608)
+position = Vector2(1758, 616)
 scale = Vector2(-1, 1)
 
 [node name="Skull" parent="Objects" instance=ExtResource("7_wqxkw")]

@@ -22,7 +22,6 @@ func _on_test_released() -> void:
 func _goto_level_1() -> void:
 	if levels[0]:
 		get_tree().change_scene_to_packed(levels[0])
-		
 
 
 func _goto_level_2() -> void:
@@ -48,8 +47,3 @@ func _goto_level_5() -> void:
 func _goto_level_6() -> void:
 	if levels[5]:
 		get_tree().change_scene_to_packed(levels[5])
-
-
-func _goto_level_7() -> void:
-	if levels[6]:
-		get_tree().change_scene_to_packed(levels[6])
