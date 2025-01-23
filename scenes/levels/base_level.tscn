@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjjpbnndl1u2i"]
+[gd_scene load_steps=9 format=3 uid="uid://bjjpbnndl1u2i"]
 
 [ext_resource type="PackedScene" uid="uid://c4sdc58617fy4" path="res://scenes/health_bar.tscn" id="1_yyjbq"]
 [ext_resource type="PackedScene" uid="uid://cvcc7klo4r57c" path="res://scenes/touch_screen_control.tscn" id="2_h6ppb"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b3fa2nnd5fn8t" path="res://scenes/ui/victory_dialog.tscn" id="5_yi0ip"]
 [ext_resource type="PackedScene" uid="uid://rn17txbxy60k" path="res://scenes/bgm.tscn" id="6_847i6"]
 [ext_resource type="PackedScene" uid="uid://b2twnlmh4mwrp" path="res://scenes/characters/bomb_guy.tscn" id="6_u3jvh"]
+[ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resources/tile_set.tres" id="7_4yl6b"]
 
 [node name="BaseLevel" type="Node2D"]
 
@@ -28,11 +29,18 @@ player = NodePath("../../BombGuy")
 
 [node name="Platform" type="Node2D" parent="."]
 
+[node name="TileMapLayer" type="TileMapLayer" parent="Platform"]
+tile_set = ExtResource("7_4yl6b")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="Platform"]
+tile_set = ExtResource("7_4yl6b")
+
 [node name="Objects" type="Node2D" parent="."]
 
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="BombGuy" parent="." instance=ExtResource("6_u3jvh")]
+position = Vector2(184, 307)
 
 [node name="Camera2D" type="Camera2D" parent="BombGuy"]
 limit_left = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://ddnpdm3qj4ek6"]
+[gd_scene load_steps=18 format=4 uid="uid://ddnpdm3qj4ek6"]
 
 [ext_resource type="PackedScene" uid="uid://c4sdc58617fy4" path="res://scenes/health_bar.tscn" id="1_nhyts"]
 [ext_resource type="PackedScene" uid="uid://cvcc7klo4r57c" path="res://scenes/touch_screen_control.tscn" id="2_fg7k0"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b3fa2nnd5fn8t" path="res://scenes/ui/victory_dialog.tscn" id="5_nkgqa"]
 [ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resources/tile_set.tres" id="6_4av3q"]
 [ext_resource type="PackedScene" uid="uid://b2twnlmh4mwrp" path="res://scenes/characters/bomb_guy.tscn" id="6_li7bu"]
+[ext_resource type="PackedScene" uid="uid://cisbogsfnuwwi" path="res://scenes/levels/level_5.tscn" id="6_xuuyd"]
 [ext_resource type="PackedScene" uid="uid://dpho7eey1kwli" path="res://scenes/objects/skull.tscn" id="7_5jc8b"]
 [ext_resource type="PackedScene" uid="uid://hehyt4gn67hk" path="res://scenes/characters/captain.tscn" id="7_cxei7"]
 [ext_resource type="PackedScene" uid="uid://dra6weoquvwgu" path="res://scenes/objects/cannon.tscn" id="7_sbads"]
@@ -32,6 +33,7 @@ player = NodePath("../../BombGuy")
 [node name="PauseDialog" parent="CanvasLayer" instance=ExtResource("4_nglbl")]
 
 [node name="VictoryDialog" parent="CanvasLayer" instance=ExtResource("5_nkgqa")]
+next_scene = ExtResource("6_xuuyd")
 
 [node name="Platform" type="Node2D" parent="."]
 
