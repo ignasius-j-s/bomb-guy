@@ -3,7 +3,7 @@ extends State
 
 @export var air_state: State
 @export var throw_state: State
-@export var jump_velocity = -400.0
+var jump_velocity = -400.0
 
 var sfx_player = AudioStreamPlayer.new()
 var jump_sfx_stream = preload("res://assets/Audio/Jump.wav")

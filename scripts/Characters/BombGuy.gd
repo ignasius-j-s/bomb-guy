@@ -2,6 +2,7 @@ class_name BombGuy
 extends CharacterBody2D
 
 @export var speed: float = 240.0
+@export var jump_velocity = -400.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var state_machine: StateMachine = $StateMachine
@@ -26,6 +27,7 @@ var invisible: bool = false
 var run_particle_delay = 0
 
 func _ready() -> void:
+	$StateMachine/Ground.jump_velocity = jump_velocity
 	get_hit.connect(_on_get_hit)
 	get_extra_live.connect(_on_get_extra_live)
 	$ChargingBar.hide()

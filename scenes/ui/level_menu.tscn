@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://dnn5xgxx8aglk"]
+[gd_scene load_steps=9 format=4 uid="uid://dnn5xgxx8aglk"]
 
 [ext_resource type="Script" path="res://scripts/Ui/LevelMenu.gd" id="1_3f1y5"]
 [ext_resource type="TileSet" uid="uid://ljgluonchilw" path="res://resources/tile_set.tres" id="1_jtvlg"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bsbsbck21jp8m" path="res://scenes/levels/level_2.tscn" id="3_7kt2k"]
 [ext_resource type="PackedScene" uid="uid://bd4lrfw5yhyle" path="res://scenes/levels/level_3.tscn" id="4_w0dri"]
 [ext_resource type="PackedScene" uid="uid://ddnpdm3qj4ek6" path="res://scenes/levels/level_4.tscn" id="5_arymh"]
+[ext_resource type="PackedScene" uid="uid://cisbogsfnuwwi" path="res://scenes/levels/level_5.tscn" id="6_7fb0h"]
+[ext_resource type="PackedScene" uid="uid://pw7iua7nblmf" path="res://scenes/levels/level_6.tscn" id="7_41ht6"]
 
 [node name="Level Menu" type="Control"]
 layout_mode = 3
@@ -15,7 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3f1y5")
-levels = Array[PackedScene]([ExtResource("2_ok0q4"), ExtResource("3_7kt2k"), ExtResource("4_w0dri"), ExtResource("5_arymh"), null, null])
+levels = Array[PackedScene]([ExtResource("2_ok0q4"), ExtResource("3_7kt2k"), ExtResource("4_w0dri"), ExtResource("5_arymh"), ExtResource("6_7fb0h"), ExtResource("7_41ht6")])
 
 [node name="Background" type="Node2D" parent="."]
 
