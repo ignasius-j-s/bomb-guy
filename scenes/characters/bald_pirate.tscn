@@ -441,6 +441,7 @@ wait_time = 2.0
 autostart = true
 
 [node name="StateDebugLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
+visible = false
 offset_left = -25.0
 offset_top = -68.0
 offset_right = 25.0

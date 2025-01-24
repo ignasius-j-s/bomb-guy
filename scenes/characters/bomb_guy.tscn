@@ -672,6 +672,7 @@ charging_bar = NodePath("../../ChargingBar")
 can_move = false
 
 [node name="StateDebug" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
+visible = false
 offset_left = -25.0
 offset_top = -76.0
 offset_right = 25.0
